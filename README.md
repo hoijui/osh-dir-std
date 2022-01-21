@@ -107,9 +107,6 @@ Assembly manual of the machine
 
 Examples of usage of the machine (i.e. STL file and print settings)
 
-// is here meant the usage of the needed machines for manufacturing the osh parts? I would then call it cam_files
-// or is it the config file for operating the finished assembled osh hardware, e.g. basic config file for 3D printer (dimension settings, control settings, ...), then I would call it config file. Or is this meant to be in the software_name settings?
-// or is it a operating example/ application example for the osh/ machine, e.g. how the machine can be used
 
 ## firmware (git submodule)
 
@@ -124,7 +121,8 @@ Images of the
 
 Scripts, each in its separate git submodule.
 
-## <software_name>_settings
+## software/firmware_configuration
+### <software_name>_settings
 
 Software settings for the project or machine.
 
