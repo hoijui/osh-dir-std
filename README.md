@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2022 J.C. Mariscal <jc0x0b@gmail.com>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Template
 
 This repository exemplifies a minimal template for the structure of Free/Open
