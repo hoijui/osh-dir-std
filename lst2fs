@@ -13,6 +13,7 @@ APP_NAME="Listing to File-System converter"
 
 # parameters
 output_dir="$(pwd)"
+tree_view=false
 
 function print_help() {
 
@@ -31,6 +32,8 @@ function print_help() {
 	echo -e "Options:"
 	echo -e "\t-o, --output-dir"
 	echo -e "\t\tWhere to create the file-system representation of the input listing\n\t\t(default: '$output_dir')"
+	echo -e "\t-t, --tree-view"
+	echo -e "\t\tAdditionally prints a tree view of the created dir structure"
 	echo -e "\t-h, --help"
 	echo -e "\t\tPrint this usage help and exit"
 	echo -e ""
@@ -46,6 +49,9 @@ do
 		-o|--output-dir)
 			output_dir="$1"
 			shift
+			;;
+		-t|--tree-view)
+			tree_view=true
 			;;
 		-h|--help)
 			print_help
@@ -89,3 +95,7 @@ while IFS= read -r line; do
 	fi
 done
 
+if $tree_view
+then
+	/usr/bin/tree -I ".git" --gitignore --dirsfirst "$output_dir"
+fi
