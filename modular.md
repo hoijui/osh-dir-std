@@ -14,12 +14,19 @@ and internally uses the same structure like the main project.
 It makes lots of things easier:
 
 * using sub-parts from within other projects
-* including sub-parts as git sub-modules
+* including sub-parts as git sub-modules in multiple projects
 * later extracting sub-parts as separate git repos,
   including all their history
-* keeping repositories smaller (if all/most sub-parts are git sub-modules)
-* allowing for finer-grained access control to only parts of the whole project
+* keeping repositories smaller,
+  if a majority of the parts are git sub-modules
+* use finer-grained access control,
+  to grant access to only parts of the whole project
 * swapping one implementation for an other
+* keeping non-module, but binary-heavy dirs (e.g. images)
+  also in a git sub-module,
+  which allows to clean up history on them,
+  from time to time\
+  -> smaller and faster clones
 
 ## Why generic
 
@@ -35,13 +42,12 @@ It results in:
 
 ## Guiding rules
 
-* if there is only possibly one (file) of something within a project/module,
-  it should be in the root, for examples: `bom.csv`, `README.md`, `LICENSE.txt`
 * use singular forms;
   e.g. `asset`, not `assets`
 * use common short forms, if they exist;
   e.g. `img` not `image`
-* use rather generic names, instead of specific ones, for directories;
+* for directories, use rather generic names,
+  instead of specific ones:
   e.g. `img`, not `drawing` or `photo`
 
 ## Common directory names
