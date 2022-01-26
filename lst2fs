@@ -85,7 +85,7 @@ while IFS= read -r line; do
 	else
 		parent_dir="$(dirname "$line")"
 		mkdir -p "$output_dir/$parent_dir"
-		touch "$line"
+		touch "$output_dir/$line"
 	fi
 done
 
