@@ -12,7 +12,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 This repository exemplifies a minimal template for the structure of Free/Open
 source hardware projects.
 
-When a user or maker lands on your page they should see:
+When a user or maker lands on your page, they should see:
 
 A `README.<md|org|rst|...>` file and a `LICENSE` file.
 
