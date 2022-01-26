@@ -20,17 +20,17 @@ its own, and internally uses the same structure, like in the main project.
 
 Some of the inspirations:
 
-https://gitlab.com/openflexure/openflexure-microscope
-https://github.com/prusa3d/Original-Prusa-MINI
-https://github.com/fab-machines/LaserDuo
-https://github.com/Creality3DPrinting/Ender-3
-https://github.com/fab-machines/Fabulaser-Mini
-https://github.com/NedalLive/Hypercube-NGen
+- https://gitlab.com/openflexure/openflexure-microscope
+- https://github.com/prusa3d/Original-Prusa-MINI
+- https://github.com/fab-machines/LaserDuo
+- https://github.com/Creality3DPrinting/Ender-3
+- https://github.com/fab-machines/Fabulaser-Mini
+- https://github.com/NedalLive/Hypercube-NGen
 
 # Other structure templates
 
-https://www.sciencedirect.com/journal/hardwarex
-https://osf.io/wgk7q/
+- https://www.sciencedirect.com/journal/hardwarex
+- https://osf.io/wgk7q/
 
 ## License and Copyright
 
