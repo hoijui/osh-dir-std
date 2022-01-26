@@ -12,6 +12,8 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 This repository exemplifies a minimal template for the structure of Free/Open
 source hardware projects.
 
+An alternative can be found in [modular.md](modular.md).
+
 When a user or maker lands on your page, they should see:
 
 A `README.<md|org|rst|...>` file and a `LICENSE` file.
