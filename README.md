@@ -3,6 +3,10 @@ SPDX-FileCopyrightText: 2022 J.C. Mariscal <jc0x0b@gmail.com>
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
+[![REUSE status](
+    https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/wp4-os-tools/task-1-automated-documentation/template-osh-repo-structure-minimal)](
+    https://api.reuse.software/info/gitlab.fabcity.hamburg/software/wp4-os-tools/task-1-automated-documentation/template-osh-repo-structure-minimal)
+
 # Template
 
 This repository exemplifies a minimal template for the structure of Free/Open
