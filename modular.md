@@ -176,81 +176,80 @@ test/
 ```
 
 the same in `tree` form
-(created from the above with
-`mkdir tmp; cd tmp; echo "..." | ../lst2fs`):
+(created from the above with `lst2fs`):
 
 ```
 .
-|____assembly.recipe.ttl
-|____README.md
-|____LICENSE.txt
-|____bom.csv
-|____test
-|____doc
-| |____man
-| | |____main.md
-| | |____chap-1
-| | | |____sec-2.md
-| | | |____sec-1.md
-| | | |____sec-3.md
-| |____recycling
-| | |____main.md
-| | |____chap-1
-| | | |____sec-2.md
-| | | |____sec-1.md
-| | | |____sec-3.md
-| |____usr
-| | |____main.md
-| | |____chap-1
-| | | |____sec-2.md
-| | | |____sec-1.md
-| | | |____sec-3.md
-| |____assembly
-| | |____main.md
-| | |____chap-1
-| | | |____sec-2.md
-| | | |____sec-1.md
-| | | |____sec-3.md
-|____recycle.recipe.ttl
-|____res
-| |____media
-| | |____img
-| | | |____diagram-1.svg
-| |____some-config.xml
-| |____var
-| | |____datasheet-x.pdf
-| |____asset
-| | |____media
-| | | |____img
-| | | | |____animation-1.gif
-| | | | |____drawing-1.png
-| | | | |____screenshot-1.jpg
-|____bin
-| |____release
-| |____ci
-| |____test
-| |____build
-|____build
-| |____export
-| |____doc
-| | |____man
-| | |____usr
-| | |____assembly
-| |____site
-|____manu.vf_recipe.ttl
-|____design
-| |____mech
-| | |____case.fcstd
-| | |____case-alternative.fcstd
-| |____el
-| | |____main.kicad_pcb
-| | |____main.sch
-| | |____plate.sch
-| | |____plate.kicad_pcb
-| | |____plate.pro
-| | |____main.pro
-|____src
-|____mod
-| |____module-b
-| |____module-a
+├── bin
+│   ├── build
+│   ├── ci
+│   ├── release
+│   └── test
+├── build
+│   ├── doc
+│   │   ├── assembly
+│   │   ├── man
+│   │   └── usr
+│   ├── export
+│   └── site
+├── design
+│   ├── el
+│   │   ├── main.kicad_pcb
+│   │   ├── main.pro
+│   │   ├── main.sch
+│   │   ├── plate.kicad_pcb
+│   │   ├── plate.pro
+│   │   └── plate.sch
+│   └── mech
+│       ├── case-alternative.fcstd
+│       └── case.fcstd
+├── doc
+│   ├── assembly
+│   │   ├── chap-1
+│   │   │   ├── sec-1.md
+│   │   │   ├── sec-2.md
+│   │   │   └── sec-3.md
+│   │   └── main.md
+│   ├── man
+│   │   ├── chap-1
+│   │   │   ├── sec-1.md
+│   │   │   ├── sec-2.md
+│   │   │   └── sec-3.md
+│   │   └── main.md
+│   ├── recycling
+│   │   ├── chap-1
+│   │   │   ├── sec-1.md
+│   │   │   ├── sec-2.md
+│   │   │   └── sec-3.md
+│   │   └── main.md
+│   └── usr
+│       ├── chap-1
+│       │   ├── sec-1.md
+│       │   ├── sec-2.md
+│       │   └── sec-3.md
+│       └── main.md
+├── mod
+│   ├── module-a
+│   └── module-b
+├── res
+│   ├── asset
+│   │   └── media
+│   │       └── img
+│   │           ├── animation-1.gif
+│   │           ├── drawing-1.png
+│   │           └── screenshot-1.jpg
+│   ├── media
+│   │   └── img
+│   │       └── diagram-1.svg
+│   ├── var
+│   │   └── datasheet-x.pdf
+│   └── some-config.xml
+├── src
+├── test
+├── assembly.recipe.ttl
+├── bom.csv
+├── LICENSE.txt
+├── manu.vf_recipe.ttl
+├── README.md
+└── recycle.recipe.ttl
 ```
