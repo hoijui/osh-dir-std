@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2022 J.C. Mariscal <jc0x0b@gmail.com>
+SPDX-License-Identifier: GFDL-1.3-or-later
+-->
+
 # Minimal template
 
 This repository exemplifies a minimal template for the structure of Free/Open

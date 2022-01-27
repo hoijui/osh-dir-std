@@ -1,6 +1,6 @@
 <!--
 SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
-SPDX-License-Identifier: CC0-1.0
+SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
 # Modular and generic

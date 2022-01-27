@@ -1,6 +1,6 @@
 <!--
 SPDX-FileCopyrightText: 2022 J.C. Mariscal <jc0x0b@gmail.com>
-SPDX-License-Identifier: CC-BY-SA-4.0
+SPDX-License-Identifier: CC0-1.0
 -->
 
 [![REUSE status](
