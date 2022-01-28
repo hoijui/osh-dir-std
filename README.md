@@ -16,7 +16,7 @@ SPDX-License-Identifier: CC0-1.0
 - [Modular](./modular.md): Each sub-part (aka module) is in a sub-directory of
   its own, and internally uses the same structure, like in the main project.
 
-# Inspirations
+# Inspiration
 
 Some of the inspirations:
 
@@ -34,6 +34,6 @@ Some of the inspirations:
 
 ## License and Copyright
 
-FDL1.3 or newer , (c) J.C. Mariscal-Melgar, Pieter Hijma, Robin Vobruba
+FDL1.3 or newer , (c) J.C. Mariscal-Melgar, Pieter Hijma, Robin Vobruba, Michel Langhammer
 
 ## Contributors
