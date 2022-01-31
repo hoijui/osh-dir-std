@@ -16,7 +16,7 @@ SPDX-License-Identifier: CC0-1.0
 - [Modular](./modular.md): Each sub-part (aka module) is in a sub-directory of
   its own, and internally uses the same structure, like in the main project.
 
-# Inspiration
+# Inspirations
 
 Some of the inspirations:
 
@@ -32,8 +32,9 @@ Some of the inspirations:
 - <https://www.sciencedirect.com/journal/hardwarex>
 - <https://osf.io/wgk7q/>
 
-## License and Copyright
+## License
 
-FDL1.3 or newer , (c) J.C. Mariscal-Melgar, Pieter Hijma, Robin Vobruba, Michel Langhammer
+The most relevant content of this repo
+is licensed under the `GFDL-1.3-or-later`.
+use the reuse tool (`reuse spdx`) for more details.
 
-## Contributors
