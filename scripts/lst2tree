@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# See the output of "$0 -h" for details.
+
+# Exit immediately on each error and unset variable;
+# see: https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+set -Eeuo pipefail
+#set -Eeu
+
+APP_NAME="Listing of files to tree view converter"
+
+# parameters
+
+function print_help() {
+
+	script_name="$(basename "$0")"
+	echo -e ""
+	echo -e "$APP_NAME - Given a file listing - as for example created by 'find',"
+	echo -e "generates a tree view."
+	echo -e "The input file-listing format has to follow these rules:"
+	echo -e "* one file/dir per line"
+	echo -e "* full paths, relative to the output-dir"
+	echo -e "* each line indicating a dir needs to end with a '/'"
+	echo -e "* empty lines and lines starting with '#' or ';', are ignored"
+	echo -e "* any other line indicates a file"
+	echo -e ""
+	echo -e "Usage:"
+	echo -e "\t$script_name [OPTION...]"
+	echo -e "Options:"
+	echo -e "\t-h, --help"
+	echo -e "\t\tPrint this usage help and exit"
+	echo -e "Examples:"
+	echo -e "\tfind * | $script_name"
+	echo -e ""
+}
+
+# Process command line arguments
+while [[ $# -gt 0 ]]
+do
+	arg="$1"
+	shift # $2 -> $1, $3 -> $2, ...
+
+	case "$arg" in
+		-h|--help)
+			print_help
+			exit 0
+			;;
+		*) # non-/unknown option
+			echoerr "Unknown flag: '$arg'"
+			exit 1
+			;;
+	esac
+done
+
+while IFS= read -r line
+do
+	if [ -z "$line" ] || [[ $line =~ ^[#\;].* ]]
+	then
+		continue
+	fi
+	if [[ $line =~ (^\|/)\.\.(/\|$) ]]
+	then
+		>&2 echo "Invalid sequence '..' found in: '$line'"
+		exit 1
+	fi
+	if [[ $line =~ ^/ ]]
+	then
+		>&2 echo "Please use relative listing paths; found: '$line'"
+		exit 1
+	fi
+	echo "$line"
+done | \
+	/usr/bin/tree \
+		-I ".git" \
+		--gitignore \
+		--dirsfirst \
+		--fromfile \
+		.
