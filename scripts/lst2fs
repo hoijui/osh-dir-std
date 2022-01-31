@@ -22,12 +22,12 @@ function print_help() {
 	script_name="$(basename "$0")"
 	echo -e ""
 	echo -e "$APP_NAME - Given a file listing, creates the actual file-system representation of it."
-	echo -e "The file-listing format is:"
+	echo -e "The input file-listing format has to follow these rules:"
 	echo -e "* one file/dir per line"
 	echo -e "* full paths, relative to the output-dir"
-	echo -e "* each line creating a dir needs to end with a '/'"
-	echo -e "* empty lines, and lines starting with '#' or ';', is ignored"
-	echo -e "* all other lines create files (using touch)"
+	echo -e "* each line indicating a dir needs to end with a '/'"
+	echo -e "* empty lines and lines starting with '#' or ';', are ignored"
+	echo -e "* any other line indicates a file"
 	echo -e ""
 	echo -e "Usage:"
 	echo -e "\t$script_name [OPTION...]"
@@ -72,7 +72,8 @@ then
 	exit 1
 fi
 
-while IFS= read -r line; do
+while IFS= read -r line
+do
 	if [ -z "$line" ] || [[ $line =~ ^[#\;].* ]]
 	then
 		continue
@@ -99,5 +100,9 @@ done
 
 if $tree_view
 then
-	/usr/bin/tree -I ".git" --gitignore --dirsfirst "$output_dir"
+	/usr/bin/tree \
+		-I ".git" \
+		--gitignore \
+		--dirsfirst \
+		"$output_dir"
 fi
