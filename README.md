@@ -7,7 +7,7 @@ SPDX-License-Identifier: CC0-1.0
     https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)](
     https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
 
-# Templates
+# OSH project directory structure standards
 
 - [Minimal](./minimal.md): Practical minimal template with emphasis on sources
   organisation for CAD files or Documentation, and git-submodules for firmware
