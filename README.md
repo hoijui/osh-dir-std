@@ -4,8 +4,8 @@ SPDX-License-Identifier: CC0-1.0
 -->
 
 [![REUSE status](
-    https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/wp4-os-tools/task-1-automated-documentation/template-osh-repo-structure-minimal)](
-    https://api.reuse.software/info/gitlab.fabcity.hamburg/software/wp4-os-tools/task-1-automated-documentation/template-osh-repo-structure-minimal)
+    https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)](
+    https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
 
 # Templates
 
