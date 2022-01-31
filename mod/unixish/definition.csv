@@ -1,0 +1,93 @@
+Path,Fixed (else: example),Source,Module-Dir,Arbitrary Sub-Dirs,Indicativeness (presence serves as an indicator of this dir-structure standard),Regex,Description
+LICENSES/,TRUE,TRUE,FALSE,FALSE,0.2,LICEN[SC]ES,REUSE license files (preferred over single LICENSE file)
+LICENSES/AGPL-3.0-or-later.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
+LICENSES/CC0-1.0.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
+LICENSES/Unlicense.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
+LICENSE.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)"
+README.md,TRUE,TRUE,FALSE,-,0,README(\.(txt|md|rst))?,
+bom.csv,TRUE,TRUE,FALSE,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees "
+assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe
+manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe
+recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,recycle\.vf_recipe\.ttl,ValueFlows recycling recipe
+proc/,TRUE,TRUE,FALSE,TRUE,0.9,proc,"Project maintenance scripts, preferably platform independent"
+proc/build,TRUE,TRUE,FALSE,-,0.5,proc/build,"Creates all output, including generated files and archives"
+proc/clean,TRUE,TRUE,FALSE,-,0.5,proc/clean,Deletes all generated files
+proc/test,TRUE,TRUE,FALSE,-,0.5,proc/test,"Runs potential unit- and integration tests, validation, linters and similar things"
+proc/release,TRUE,TRUE,FALSE,-,0.5,proc/release,"Creates a release for this project, including tagging and a release on the hosting platform, if any"
+proc/ci,TRUE,TRUE,FALSE,-,0.5,proc/ci,"Run by CI/Buildbot on each commit, but has to also be usable locally"
+res/,TRUE,TRUE,FALSE,FALSE,0.7,res,"Stands for ""resources"", and should hold any files that are part of the sources of the project, but are not source code, design, scripts or documentation text files."
+res/some-config.xml,FALSE,TRUE,FALSE,-,0,res/[^/]+\.xml,"One possible location for configuration & settings files, e.g. 3D printer settings, log settings, ..."
+res/conf/,TRUE,TRUE,FALSE,TRUE,0.3,res/conf,Alternative location for configuration files -> TODO decision needed
+res/conf/some-config.xml,FALSE,TRUE,FALSE,-,0,res/conf/.+\.xml,
+res/media/,TRUE,TRUE,FALSE,FALSE,0.6,res/media,Non-binary and non-large media goes here. The sub-dirs within res/assets/ and res/ should be the same.
+res/media/img/,TRUE,TRUE,FALSE,TRUE,0.3,res/media/img,Non-binary and non-large media goes here. The sub-dirs within res/assets/ and res/ should be the same.
+res/media/img/diagram-1.svg,FALSE,TRUE,FALSE,-,0,res/media/img/.+\.svg,Non-binary and non-large media goes here. The sub-dirs within res/assets/ and res/ should be the same.
+res/assets/,TRUE,TRUE,FALSE,FALSE,0.7,res/assets,"All binary and/or large resources should go here, as this allows to go ""clean-slate"" with this data from time to time, to reduce clone size, if done as a git sub-module (which can also be done later). Having it as a git sub-module, also allows to not fetch it at all, if storage or bandwidth is an issue, and it is not required for the task at hand."
+res/assets/media/,TRUE,TRUE,FALSE,FALSE,0.6,res/assets/media,
+res/assets/media/img/,TRUE,TRUE,FALSE,TRUE,0.3,res/assets/media/img,
+res/assets/media/img/drawing-1.png,FALSE,TRUE,FALSE,-,0,res/assets/media/img/.+\.png,
+res/assets/media/img/animation-1.gif,FALSE,TRUE,FALSE,-,0,res/assets/media/img/.+\.gif,
+res/assets/media/img/screenshot-1.jpg,FALSE,TRUE,FALSE,-,0,res/assets/media/img/.+\.jpe?g,
+res/assets/var/,TRUE,TRUE,FALSE,TRUE,0.5,res/assets/var/,"Stands for ""various"", aka ""misc.""/""miscellaneous""; and should hold files that do not fit into any of the other resource categories."
+res/assets/var/datasheet-x.pdf,FALSE,TRUE,FALSE,-,0,res/assets/var/.+\.pdf,
+src/anim/,TRUE,TRUE,FALSE,TRUE,0.4,src/anim,Animation sources - The generated animations would usually serve documentation
+src/anim/assembly.blend,FALSE,TRUE,FALSE,-,0,src/anim/.+\.blend,Blender 3D source file
+src/calc/,TRUE,TRUE,FALSE,TRUE,0.4,src/calc,Calculation sources
+src/calc/required-material-thickness.m,FALSE,TRUE,FALSE,-,0,src/calc/.+\.m,Octave (or Matlab) calculations file
+src/sim/,TRUE,TRUE,FALSE,TRUE,0.4,src/sim,Simulation sources
+src/sim/stress-test.OpenFOAM,FALSE,TRUE,FALSE,-,0,src/sim/.+\.OpenFOAM,
+src/elec/,TRUE,TRUE,FALSE,TRUE,0.8,src/elec,"Electronic ""blueprints"""
+src/elec/main.pro,FALSE,TRUE,FALSE,-,0,src/elec/.+\.pro,KiCad project file
+src/elec/main.sch,FALSE,TRUE,FALSE,-,0,src/elec/.+\.sch,KiCad schematics file
+src/elec/main.kicad_pcb,FALSE,TRUE,FALSE,-,0,src/elec/.+\.kicad_pcb,KiCad PCB file
+src/elec/plate.pro,FALSE,TRUE,FALSE,-,0,src/elec/.+\.pro,
+src/elec/plate.sch,FALSE,TRUE,FALSE,-,0,src/elec/.+\.sch,
+src/elec/plate.kicad_pcb,FALSE,TRUE,FALSE,-,0,src/elec/.+\.kicad_pcb,
+src/elec/main-subs/,FALSE,TRUE,FALSE,TRUE,0,src/elec/[^/]+,"Electronic ""blueprints"" arbitrary sub-dir"
+src/elec/main-subs/sub-a.pro,FALSE,TRUE,FALSE,-,0,src/elec/.+\.pro,
+src/elec/main-subs/sub-a.sch,FALSE,TRUE,FALSE,-,0,src/elec/.+\.sch,
+src/elec/main-subs/sub-a.kicad_pcb,FALSE,TRUE,FALSE,-,0,src/elec/.+\.kicad_pcb,
+src/elec/main-subs/sub-b.pro,FALSE,TRUE,FALSE,-,0,src/elec/.+\.pro,
+src/elec/main-subs/sub-b.sch,FALSE,TRUE,FALSE,-,0,src/elec/.+\.sch,
+src/elec/main-subs/sub-b.kicad_pcb,FALSE,TRUE,FALSE,-,0,src/elec/.+\.kicad_pcb,
+src/elec/main-subs/parts.lib,FALSE,TRUE,FALSE,-,0,src/elec/.+\.lib,KiCad parts library
+src/firmware/,TRUE,TRUE,FALSE,TRUE,0.4,src/firmware,Firmware sources
+src/firmware/main.c,FALSE,TRUE,FALSE,-,0,src/firmware/.+\.c,
+src/firmware/other.h,FALSE,TRUE,FALSE,-,0,src/firmware/.+\.h,
+src/firmware/other.c,FALSE,TRUE,FALSE,-,0,src/firmware/.+\.c,
+src/mech/,TRUE,TRUE,FALSE,TRUE,0.8,src/mech,"Mechanical ""blueprints"""
+src/mech/case.fcstd,FALSE,TRUE,FALSE,-,0,src/mech/.+\.fcstd,FreeCAD project
+src/mech/case-alternative.fcstd,FALSE,TRUE,FALSE,-,0,src/mech/.+\.fcstd,FreeCAD project
+src/mech/parts.lib,FALSE,TRUE,FALSE,-,0,src/mech/.+\.lib,FreeCAD parts library
+src/test/,TRUE,TRUE,FALSE,TRUE,0.3,src/test,Sources for unit- and integration tests for anything contained in this project (excluding the inner details of sub-modules)
+build/assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,build/assembly\.vf_recipe\.ttl,"alternative location, if generated - ValueFlows assembling recipe"
+build/manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,build/manu\.vf_recipe\.ttl,
+build/recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,build/recycle\.vf_recipe\.ttl,
+build/bom.csv,TRUE,FALSE,FALSE,-,0.2,build/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated"
+build/site/,TRUE,FALSE,FALSE,TRUE,0.2,build/site,
+build/doc/assembly/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/assembly,
+build/doc/man/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/man,
+build/doc/usr/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/usr,
+build/doc/recycling/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/recycling,
+build/export/,TRUE,FALSE,FALSE,TRUE,0.2,build/export,
+doc/,TRUE,TRUE,FALSE,FALSE,0.3,doc,
+doc/assembly/,TRUE,TRUE,FALSE,TRUE,0.5,doc/assembly,Assembly instructions sources
+doc/assembly/vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,doc/assembly/vf_recipe\.ttl,alternative location 2 - ValueFlows assembling recipe
+doc/assembly/main.md,FALSE,TRUE,FALSE,-,0,doc/assembly/.+\.md,
+doc/assembly/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/assembly/.+\.md,
+doc/assembly/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/assembly/.+\.md,
+doc/manu/,TRUE,TRUE,FALSE,TRUE,0.5,doc/manu,Manufacturing instructions sources
+doc/manu/main.md,FALSE,TRUE,FALSE,-,0,doc/manu/.+\.md,
+doc/manu/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/manu/.+\.md,
+doc/manu/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/manu/.+\.md,
+doc/usr/,TRUE,TRUE,FALSE,TRUE,0.5,doc/usr,"User manual (aka operation, repair & maintenance instructions -> split up?) sources"
+doc/usr/main.md,FALSE,TRUE,FALSE,-,0,doc/usr/.+\.md,
+doc/usr/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/usr/.+\.md,
+doc/usr/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/usr/.+\.md,
+doc/recycling/,TRUE,TRUE,FALSE,TRUE,0.5,doc/recycling,Recycling instructions sources
+doc/recycling/main.md,FALSE,TRUE,FALSE,-,0,doc/recycling/.+\.md,
+doc/recycling/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/recycling/.+\.md,
+doc/recycling/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/recycling/.+\.md,
+mod/,TRUE,TRUE,TRUE,FALSE,0.9,mod,"Modules - In here might be git sub-modules or not, but either way, they have to follow the same dir structure as the main project, recursively"
+mod/module-a/,FALSE,TRUE,TRUE,FALSE,0,mod/[^/]+,
+mod/module-b/,FALSE,TRUE,TRUE,FALSE,0,mod/[^/]+,
