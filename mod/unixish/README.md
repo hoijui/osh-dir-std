@@ -56,7 +56,7 @@ These are generic directory names,
 commonly found in soft- and hardware projects,
 which we might want to use (in alphabetical order):
 
-```
+```csv
 assembly(-guide)
 asset(s)
 bin vs script(s)
@@ -81,7 +81,7 @@ var vs misc
 
 and the same, grouped into clusters of potential conflict or overlap:
 
-```
+```csv
 bin
 ci
 
