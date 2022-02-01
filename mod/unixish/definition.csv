@@ -9,12 +9,12 @@ bom.csv,TRUE,TRUE,FALSE,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of
 assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe
 manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe
 recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,recycle\.vf_recipe\.ttl,ValueFlows recycling recipe
-proc/,TRUE,TRUE,FALSE,TRUE,0.9,proc,"Project maintenance scripts, preferably platform independent"
-proc/build,TRUE,TRUE,FALSE,-,0.5,proc/build,"Creates all output, including generated files and archives"
-proc/clean,TRUE,TRUE,FALSE,-,0.5,proc/clean,Deletes all generated files
-proc/test,TRUE,TRUE,FALSE,-,0.5,proc/test,"Runs potential unit- and integration tests, validation, linters and similar things"
-proc/release,TRUE,TRUE,FALSE,-,0.5,proc/release,"Creates a release for this project, including tagging and a release on the hosting platform, if any"
-proc/ci,TRUE,TRUE,FALSE,-,0.5,proc/ci,"Run by CI/Buildbot on each commit, but has to also be usable locally"
+run/,TRUE,TRUE,FALSE,TRUE,0.9,run,"Project maintenance scripts, preferably platform independent"
+run/build,TRUE,TRUE,FALSE,-,0.5,run/build,"Creates all output, including generated files and archives"
+run/clean,TRUE,TRUE,FALSE,-,0.5,run/clean,Deletes all generated files
+run/test,TRUE,TRUE,FALSE,-,0.5,run/test,"Runs potential unit- and integration tests, validation, linters and similar things"
+run/release,TRUE,TRUE,FALSE,-,0.5,run/release,"Creates a release for this project, including tagging and a release on the hosting platform, if any"
+run/ci,TRUE,TRUE,FALSE,-,0.5,run/ci,"Run by CI/Buildbot on each commit, but has to also be usable locally"
 res/,TRUE,TRUE,FALSE,FALSE,0.7,res,"Stands for ""resources"", and should hold any files that are part of the sources of the project, but are not source code, design, scripts or documentation text files."
 res/some-config.xml,FALSE,TRUE,FALSE,-,0,res/[^/]+\.xml,"One possible location for configuration & settings files, e.g. 3D printer settings, log settings, ..."
 res/conf/,TRUE,TRUE,FALSE,TRUE,0.3,res/conf,Alternative location for configuration files -> TODO decision needed
