@@ -59,12 +59,16 @@ do
 			print_help
 			exit 0
 			;;
-		*) # non-/unknown option
+		-*) # unknown switch
 			>&2 echo "ERROR: Unknown switch '$arg'"
 			exit 1
 			;;
+		*) # non-switch
+			POSITIONAL+=("$arg") # save it in an array for later
+			;;
 	esac
 done
+set -- "${POSITIONAL[@]}" # restore positional parameters
 
 if ! [ -d "$output_dir" ] || [ -n "$(/usr/bin/ls -A "$output_dir")" ]
 then
