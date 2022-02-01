@@ -48,7 +48,7 @@ do
 			exit 0
 			;;
 		*) # non-/unknown option
-			echoerr "Unknown flag: '$arg'"
+			>&2 echo "ERROR: Unknown switch '$arg'"
 			exit 1
 			;;
 	esac
