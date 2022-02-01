@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
+# SPDX-License-Identifier: Unlicense
+
+image: hoijui/movedo:latest
+
+check-style:
+  allow_failure: true
+  script:
+  # Check Markdown style (excluding LICENSE.md)
+  - ./ci --check-style
+
+pages:
+  before_script:
+  # Need to fetch MoVeDo before using its scripts!
+  - git submodule update --init --recursive
+  script:
+  - ./ci
+  artifacts:
+    paths:
+    - build
