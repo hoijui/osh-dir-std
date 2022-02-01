@@ -77,7 +77,7 @@ do
 	fi
 	echo "$line"
 done | \
-	/usr/bin/tree \
+	tree \
 		-I ".git" \
 		--gitignore \
 		--dirsfirst \

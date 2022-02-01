@@ -104,7 +104,7 @@ done
 
 if $tree_view
 then
-	/usr/bin/tree \
+	tree \
 		-I ".git" \
 		--gitignore \
 		--dirsfirst \
