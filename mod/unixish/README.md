@@ -13,16 +13,16 @@ and internally uses the same structure like the main project.
 
 It makes lots of things easier:
 
-* using sub-parts from within other projects
-* including sub-parts as git sub-modules in multiple projects
-* later extracting sub-parts as separate git repos,
+- using sub-parts from within other projects
+- including sub-parts as git sub-modules in multiple projects
+- later extracting sub-parts as separate git repos,
   including all their history
-* keeping repositories smaller,
+- keeping repositories smaller,
   if a majority of the parts are git sub-modules
-* use finer-grained access control,
+- use finer-grained access control,
   to grant access to only parts of the whole project
-* swapping one implementation for an other
-* keeping non-module, but binary-heavy dirs (e.g. images)
+- swapping one implementation for an other
+- keeping non-module, but binary-heavy dirs (e.g. images)
   also in a git sub-module,
   which allows to clean up history on them,
   from time to time\
@@ -32,21 +32,21 @@ It makes lots of things easier:
 
 It results in:
 
-* overall less directories
-* less standard names one has to remember
-* projects looking more similar to each other,
+- overall less directories
+- less standard names one has to remember
+- projects looking more similar to each other,
   which may contribute to make designers feel "at home"
   when coming to an other project
-* leads to less "structure-bloat"
-* makes tooling easier and more robust
+- leads to less "structure-bloat"
+- makes tooling easier and more robust
 
 ## Guiding rules
 
-* use singular forms;
+- use singular forms;
   e.g. `asset`, not `assets`
-* use common short forms, if they exist;
+- use common short forms, if they exist;
   e.g. `img` not `image`
-* for directories, use rather generic names,
+- for directories, use rather generic names,
   instead of specific ones:
   e.g. `img`, not `drawing` or `photo`
 
