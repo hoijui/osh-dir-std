@@ -3,11 +3,23 @@ SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
-# Modular and generic
+# Unixish - OSH project directory structure standards
+
+In short: **Modular and generic**
 
 The basic idea here,
 is that each sub-part aka module is in a sub-directory of its own,
 and internally uses the same structure like the main project.
+
+## Definition
+
+This standards machine-readable definition,
+which was derived manually from the thinking outlined below,
+can be found in the [definition.csv](definition.csv) file,
+While more palatable versions can be found at:
+
+- [file-listing](TODO)
+- [tree](TODO)
 
 ## Why modular
 

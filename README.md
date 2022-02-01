@@ -1,5 +1,6 @@
 <!--
 SPDX-FileCopyrightText: 2022 J.C. Mariscal <jc0x0b@gmail.com>
+SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
 SPDX-License-Identifier: CC0-1.0
 -->
 
@@ -9,23 +10,21 @@ SPDX-License-Identifier: CC0-1.0
 
 # OSH project directory structure standards
 
-- [Minimal](./minimal.md): Practical minimal template with emphasis on sources
-  organisation for CAD files or Documentation, and git-submodules for firmware
-  and scripts
+## Standards documented in this repo
 
-- [Modular](./modular.md): Each sub-part (aka module) is in a sub-directory of
-  its own, and internally uses the same structure, like in the main project.
+- [Prusaish](mod/prusaish/README.md):
+  Promotes a practical, minimal style,
+  with emphasis on sources,
+  and git sub-modules for firmware and scripts.
+  Most directories are named after the file-type
+  (i.e. suffix or software) they contain.
 
-# Inspirations
-
-Some of the inspirations:
-
-- <https://gitlab.com/openflexure/openflexure-microscope>
-- <https://github.com/prusa3d/Original-Prusa-MINI>
-- <https://github.com/fab-machines/LaserDuo>
-- <https://github.com/Creality3DPrinting/Ender-3>
-- <https://github.com/fab-machines/Fabulaser-Mini>
-- <https://github.com/NedalLive/Hypercube-NGen>
+- [Unixish](mod/unixish/README.md) (**favored**):
+  Each sub-part (aka module) is in a sub-directory of its own,
+  and internally uses the same structure like in the project root,
+  recursively.
+  Most directories are named after the abstract/generic function
+  of their content.
 
 # Other structure templates
 
