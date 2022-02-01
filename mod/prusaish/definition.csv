@@ -1,55 +1,65 @@
 Path,Fixed (else: example),Source,Module-Dir,Arbitrary Sub-Dirs,Indicativeness (presence serves as an indicator of this dir-structure standard),Regex,Description
-bom/,TRUE,TRUE,FALSE,TRUE,0.5,bom,The BoM of the OSH
-bom/bom.csv,TRUE,TRUE,FALSE,-,0.5,bom/bom\.csv,"Structural, machine-readable, source"
-bom/bom.md,TRUE,TRUE,FALSE,-,0.5,bom/bom\.md,"human-readable, source"
-bom/bom.pdf,TRUE,TRUE,FALSE,-,0.5,bom/bom\.pdf,"human-readable, export"
-cad_2d/,TRUE,TRUE,FALSE,FALSE,0.8,cad_2d,"2D CAD files, organised by format and subassembly"
-cad_2d/dxf/,TRUE,TRUE,FALSE,TRUE,0.8,cad_2d/dxf,
-cad_2d/dxf/subassembly_01_name_lasercut.dxf,FALSE,TRUE,FALSE,-,0.0,cad_2d/dxf/.*/.dxf,
-cad_2d/svg/,TRUE,TRUE,FALSE,TRUE,0.8,cad_2d/svg/,
-cad_2d/svg/subassembly_01_name_vinyl_cut.svg,FALSE,TRUE,FALSE,-,0.0,cad_2d/svg/.*/.svg,
-cad_3d/,TRUE,TRUE,FALSE,FALSE,0.8,cad_3d,"3D CAD files, organised by format and subassembly"
-cad_3d/fcstd/,TRUE,TRUE,FALSE,TRUE,0.8,cad_3d/fcstd,
-cad_3d/fcstd/overall_machine.FCStd,FALSE,TRUE,FALSE,-,0.0,cad_3d/fcstd/.*/.FCStd,
-cad_3d/fcstd/step/,TRUE,TRUE,FALSE,TRUE,0.8,cad_3d/fcstd/step,
-cad_3d/fcstd/step/subassembly_01_name_3d_printed.stp,FALSE,TRUE,FALSE,-,0.0,cad_3d/fcstd/step/.*/.stp,
-cad_3d/fcstd/step/subassembly_02_name_laser_cut.stp,FALSE,TRUE,FALSE,-,0.0,cad_3d/fcstd/step/.*/.stp,
-cad_3d/fcstd/step/subassembly_03_name_machined.stp,FALSE,TRUE,FALSE,-,0.0,cad_3d/fcstd/step/.*/.stp,
-cad_3d/fcstd/stl/,TRUE,TRUE,FALSE,TRUE,0.8,cad_3d/fcstd/stl,
-cad_3d/fcstd/stl/optional.stl,FALSE,TRUE,FALSE,-,0.0,cad_3d/fcstd/stl/.*/.stl,
-cad_sch/,TRUE,TRUE,FALSE,TRUE,0.8,cad_sch,Schematics of the machine design organised by PCB
-cad_sch/lib/,TRUE,TRUE,FALSE,TRUE,0.4,cad_sch/lib,
-cad_sch/lib/libname2.lib,FALSE,TRUE,FALSE,-,0.0,cad_sch/lib/.*/.lib,
-cad_sch/lib/libname.lib,FALSE,TRUE,FALSE,-,0.0,cad_sch/lib/.*/.lib,
-cad_sch/subassembly_pcbname2_otherdetails/,FALSE,TRUE,FALSE,-,0.0,,
-cad_sch/subassembly_pcbname2_otherdetails/pcbname2.brd,FALSE,TRUE,FALSE,-,0.0,cad_sch/.*/.brd,
-cad_sch/subassembly_pcbname2_otherdetails/pcbname2.sch,FALSE,TRUE,FALSE,-,0.0,cad_sch/.*/.sch,
-cad_sch/subassembly_pcbname_otherdetails/,FALSE,TRUE,FALSE,-,0.0,,
-cad_sch/subassembly_pcbname_otherdetails/pcbname.brd,FALSE,TRUE,FALSE,-,0.0,,
-cad_sch/subassembly_pcbname_otherdetails/pcbname.sch,FALSE,TRUE,FALSE,-,0.0,,
-datasheets/,TRUE,TRUE,FALSE,TRUE,0.6,datasheets,Datasheets of external parts and components of the OSH
-datasheets/datasheetname.pdf,FALSE,TRUE,FALSE,-,0.0,datasheets/.*/.pdf,
-docs/,TRUE,TRUE,FALSE,FALSE,0.4,docs,
-docs/electronics/,TRUE,TRUE,FALSE,TRUE,0.0,docs/electronics,
-docs/mechanical/,TRUE,TRUE,FALSE,TRUE,0.0,docs/mechanical,
-drawings/,TRUE,TRUE,FALSE,TRUE,0.8,drawings,"Technical drawings of the machine, and machining tolerances of problem parts"
-drawings/overall_machine_drawing.pdf,FALSE,TRUE,FALSE,-,0.0,drawings/.*/.pdf,
-drawings/subassembly_01_drawing.pdf,FALSE,TRUE,FALSE,-,0.0,,
-examples/,TRUE,TRUE,FALSE,TRUE,0.6,examples,Examples of usage of the machine (i.e. STL file and print settings)
-examples/example_01.foo,FALSE,TRUE,FALSE,-,0.0,examples/.*,
-examples/example_01.md,FALSE,TRUE,FALSE,-,0.0,examples/.*/.md,
-examples/example_01_settings.foo,FALSE,TRUE,FALSE,-,0.0,,
-firmware/,TRUE,TRUE,TRUE,TRUE,0.5,firmware,"Firmware of the project imported as a submodule, residing outside the repository"
-img/,TRUE,TRUE,FALSE,TRUE,0.4,img,Images of the OSH
-LICENSE,TRUE,TRUE,FALSE,-,0.0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,
-manual/,TRUE,TRUE,FALSE,TRUE,0.5,manual,
-manual/manual_assembly.pdf,TRUE,TRUE,FALSE,-,0.0,manual/manual_assembly/.pdf,Assembly manual of the machine
-manual/manual_operation.pdf,TRUE,TRUE,FALSE,-,0.0,manual/manual_operation/.pdf,Operation manual of the machine
-README.md,TRUE,TRUE,FALSE,-,0.0,README(\.(txt|md|rst))?,
-scripts/,TRUE,TRUE,FALSE,TRUE,0.3,scripts,"Scripts, each in its separate git submodule"
-scripts/script01_git_submodule,FALSE,TRUE,FALSE,-,0.0,scripts/.*,
-scripts/script02_git_submodule,FALSE,TRUE,FALSE,-,0.0,,
-software1_settings/,FALSE,TRUE,FALSE,-,0.0,software.*_settings,Software settings for the project or machine
-software1_settings/software1.conf,FALSE,TRUE,FALSE,-,0.0,software.*_settings/.*.conf,
-software2_settings/,FALSE,TRUE,FALSE,-,0.0,software.*_settings,
-software2_settings/software2.conf,FALSE,TRUE,FALSE,-,0.0,software.*_settings/.*.conf,
+bom/,TRUE,TRUE,FALSE,TRUE,"0,5",bom,The BoM of the OSH
+bom/bom.csv,TRUE,TRUE,FALSE,-,"0,5",bom/bom\.csv,"Structural, machine-readable, source"
+bom/bom.md,TRUE,TRUE,FALSE,-,"0,5",bom/bom\.md,"human-readable, source"
+bom/bom.pdf,TRUE,TRUE,FALSE,-,"0,5",bom/bom\.pdf,"human-readable, export"
+cad_mechanics/,TRUE,TRUE,FALSE,FALSE,"0,6",cad_mechanics,"Mechanics CAD files, organised by dimensionality"
+cad_mechanics/cad_2d/,TRUE,TRUE,FALSE,FALSE,"0,8",cad_mechanics/cad_2d,"2D CAD files, organised by format and subassembly"
+cad_mechanics/cad_2d/dxf/,TRUE,TRUE,FALSE,TRUE,"0,8",cad_mechanics/cad_2d/dxf,
+cad_mechanics/cad_2d/dxf/subassembly_01_name_lasercut.dxf,FALSE,TRUE,FALSE,-,0,cad_mechanics/cad_2d/dxf/.*/.dxf,
+cad_mechanics/cad_2d/svg/,TRUE,TRUE,FALSE,TRUE,"0,8",cad_mechanics/cad_2d/svg/,
+cad_mechanics/cad_2d/svg/subassembly_01_name_vinyl_cut.svg,FALSE,TRUE,FALSE,-,0,cad_mechanics/cad_2d/svg/.*/.svg,
+cad_mechanics/cad_3d/,TRUE,TRUE,FALSE,FALSE,"0,8",cad_mechanics/cad_3d,"3D CAD files, organised by format and subassembly"
+cad_mechanics/cad_3d/fcstd/,TRUE,TRUE,FALSE,TRUE,"0,8",cad_mechanics/cad_3d/fcstd,
+cad_mechanics/cad_3d/fcstd/overall_machine.FCStd,FALSE,TRUE,FALSE,-,0,cad_mechanics/cad_3d/fcstd/.*/.FCStd,
+cad_mechanics/cad_3d/fcstd/step/,TRUE,TRUE,FALSE,TRUE,"0,8",cad_mechanics/cad_3d/fcstd/step,
+cad_mechanics/cad_3d/fcstd/step/subassembly_01_name_3d_printed.stp,FALSE,TRUE,FALSE,-,0,cad_mechanics/cad_3d/fcstd/step/.*/.stp,
+cad_mechanics/cad_3d/fcstd/step/subassembly_02_name_laser_cut.stp,FALSE,TRUE,FALSE,-,0,cad_mechanics/cad_3d/fcstd/step/.*/.stp,
+cad_mechanics/cad_3d/fcstd/step/subassembly_03_name_machined.stp,FALSE,TRUE,FALSE,-,0,cad_mechanics/cad_3d/fcstd/step/.*/.stp,
+cad_mechanics/cad_3d/fcstd/stl/,TRUE,TRUE,FALSE,TRUE,"0,8",cad_mechanics/cad_3d/fcstd/stl,
+cad_mechanics/cad_3d/fcstd/stl/optional.stl,FALSE,TRUE,FALSE,-,0,cad_mechanics/cad_3d/fcstd/stl/.*/.stl,
+cad_electronics/,TRUE,TRUE,FALSE,TRUE,"0,8",cad_electronics,Schematics of the machine design organised by PCB
+cad_electronics/lib/,TRUE,TRUE,FALSE,TRUE,"0,4",cad_electronics/lib,
+cad_electronics/lib/libname2.lib,FALSE,TRUE,FALSE,-,0,cad_electronics/lib/.*/.lib,
+cad_electronics/lib/libname.lib,FALSE,TRUE,FALSE,-,0,cad_electronics/lib/.*/.lib,
+cad_electronics/subassembly_pcbname2_otherdetails/,FALSE,TRUE,FALSE,-,0,,
+cad_electronics/subassembly_pcbname2_otherdetails/pcbname2.brd,FALSE,TRUE,FALSE,-,0,cad_electronics/.*/.brd,
+cad_electronics/subassembly_pcbname2_otherdetails/pcbname2.sch,FALSE,TRUE,FALSE,-,0,cad_electronics/.*/.sch,
+cad_electronics/subassembly_pcbname_otherdetails/,FALSE,TRUE,FALSE,-,0,,
+cad_electronics/subassembly_pcbname_otherdetails/pcbname.brd,FALSE,TRUE,FALSE,-,0,,
+cad_electronics/subassembly_pcbname_otherdetails/pcbname.sch,FALSE,TRUE,FALSE,-,0,,
+datasheets_external_parts/,TRUE,TRUE,FALSE,FALSE,"0,6",datasheets_external_parts,Datasheets of external parts and components of the OSH
+datasheets_external_parts/datasheets_mechanics/,TRUE,TRUE,FALSE,TRUE,"0,6",datasheets_external_parts/datasheets_mechanics,"Datasheets of external, mechanical parts and components of the OSH"
+datasheets_external_parts/datasheets_mechanics/datasheetname.pdf,FALSE,TRUE,FALSE,-,0,datasheets_external_parts/datasheets_mechanics/.*/.pdf,
+datasheets_external_parts/datasheets_electronics/,TRUE,TRUE,FALSE,TRUE,"0,6",datasheets_external_parts/datasheets_electronics,"Datasheets of external, electronic parts and components of the OSH"
+datasheets_external_parts/datasheets_electronics/datasheetname.pdf,FALSE,TRUE,FALSE,-,0,datasheets_external_parts/datasheets_electronics/.*/.pdf,
+docs/,TRUE,TRUE,FALSE,FALSE,"0,4",docs,
+docs/electronics/,TRUE,TRUE,FALSE,TRUE,0,docs/electronics,
+docs/mechanical/,TRUE,TRUE,FALSE,TRUE,0,docs/mechanical,
+docs/drawings/,TRUE,TRUE,FALSE,FALSE,"0,8",docs/drawings,"Technical drawings of the machine, and machining tolerances of problem parts"
+docs/drawings/mechanics/,TRUE,TRUE,FALSE,TRUE,"0,8",docs/drawings/mechanics,"Technical drawings of the machine, and machining tolerances of problem parts - Mechanics"
+docs/drawings/mechanics/overall_machine_drawing.pdf,FALSE,TRUE,FALSE,-,0,docs/drawings/mechanics/.*/.pdf,
+docs/drawings/mechanics/subassembly_01_drawing.pdf,FALSE,TRUE,FALSE,-,0,,
+docs/drawings/electronics/,TRUE,TRUE,FALSE,TRUE,"0,8",docs/drawings/electronics,"Technical drawings of the machine, and machining tolerances of problem parts - Electronics"
+docs/drawings/electronics/overall_machine_drawing.pdf,FALSE,TRUE,FALSE,-,0,docs/drawings/electronics/.*/.pdf,
+docs/drawings/electronics/subassembly_01_drawing.pdf,FALSE,TRUE,FALSE,-,0,,
+docs/manual/,TRUE,TRUE,FALSE,TRUE,"0,5",manual,
+docs/manual/manual_assembly.pdf,TRUE,TRUE,FALSE,-,0,manual/manual_assembly/.pdf,Assembly manual of the machine
+docs/manual/manual_operation.pdf,TRUE,TRUE,FALSE,-,0,manual/manual_operation/.pdf,Operation manual of the machine
+example/,TRUE,TRUE,FALSE,TRUE,"0,6",example,Examples of usage of the machine (i.e. STL file and print settings)
+example/example_01.foo,FALSE,TRUE,FALSE,-,0,example/.*,
+example/example_01.md,FALSE,TRUE,FALSE,-,0,example/.*/.md,
+example/example_01_settings.foo,FALSE,TRUE,FALSE,-,0,,
+firmware/,TRUE,TRUE,TRUE,TRUE,"0,5",firmware,"Firmware of the project imported as a submodule, residing outside the repository"
+img/,TRUE,TRUE,FALSE,TRUE,"0,4",img,Images of the OSH
+LICENSE,TRUE,TRUE,FALSE,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,
+README.md,TRUE,TRUE,FALSE,-,0,README(\.(txt|md|rst))?,
+scripts/,TRUE,TRUE,FALSE,TRUE,"0,3",scripts,"Scripts, each in its separate git submodule"
+scripts/script01_git_submodule,FALSE,TRUE,FALSE,-,0,scripts/.*,
+scripts/script02_git_submodule,FALSE,TRUE,FALSE,-,0,,
+software/,TRUE,TRUE,FALSE,FALSE,"0,6",software,
+software/firmware_configuration/,TRUE,TRUE,FALSE,TRUE,"0,6",software/firmware_configuration,
+software/firmware_configuration/software1_settings/,FALSE,TRUE,FALSE,-,0,software/firmware_configuration/software.*_settings,Software settings for the project or machine
+software/firmware_configuration/software1_settings/software1.conf,FALSE,TRUE,FALSE,-,0,software/firmware_configuration/software.*_settings/.*.conf,
+software/firmware_configuration/software2_settings/,FALSE,TRUE,FALSE,-,0,software/firmware_configuration/software.*_settings,
+software/firmware_configuration/software2_settings/software2.conf,FALSE,TRUE,FALSE,-,0,software/firmware_configuration/software.*_settings/.*.conf,
