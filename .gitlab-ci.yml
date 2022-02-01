@@ -7,14 +7,14 @@ check-style:
   allow_failure: true
   script:
   # Check Markdown style (excluding LICENSE.md)
-  - ./ci --check-style
+  - run/ci --check-style
 
 pages:
   before_script:
   # Need to fetch MoVeDo before using its scripts!
   - git submodule update --init --recursive
   script:
-  - ./ci
+  - run/ci
   artifacts:
     paths:
     - build
