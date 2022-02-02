@@ -79,7 +79,6 @@ do
 done | \
 	tree \
 		-I ".git" \
-		--gitignore \
 		--dirsfirst \
 		--fromfile \
 		.
