@@ -14,8 +14,6 @@ APP_NAME="Listing to File-System converter"
 # parameters
 output_dir="$(pwd)"
 
-echoerr() { echo "$@" 1>&2; }
-
 function print_help() {
 
 	script_name="$(basename "$0")"
