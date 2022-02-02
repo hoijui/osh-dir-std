@@ -86,6 +86,9 @@ do
 done > "$lst_clean_tmp"
 
 tree \
+	-a \
+	-F \
+	--noreport \
 	-I ".git" \
 	--dirsfirst \
 	--fromfile \
