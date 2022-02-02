@@ -23,8 +23,10 @@ which was derived manually from the thinking outlined below,
 can be found in the [definition.csv](definition.csv) file,
 While more palatable versions can be found at:
 
-- [file-listing](TODO)
-- [tree](TODO)
+- [file-listing](
+  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/prusaish/listing.txt)
+- [tree](
+  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/prusaish/tree.html)
 
 # Inspirations
 
