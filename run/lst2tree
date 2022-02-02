@@ -11,6 +11,7 @@ set -Eeuo pipefail
 
 APP_NAME="Listing of files to tree view converter"
 script_name="$(basename "$0")"
+output=/dev/stdout
 
 # parameters
 
@@ -29,6 +30,8 @@ function print_help() {
 	echo -e "Usage:"
 	echo -e "\t$script_name [OPTION...]"
 	echo -e "Options:"
+	echo -e "\t-o, --output [FILE]"
+	echo -e "\t\tSets the output file to write the tree to (default: '$output')"
 	echo -e "\t-h, --help"
 	echo -e "\t\tPrint this usage help and exit"
 	echo -e "Examples:"
@@ -46,6 +49,10 @@ do
 		-h|--help)
 			print_help
 			exit 0
+			;;
+		-o|--output)
+			output="$1"
+			shift
 			;;
 		-*) # unknown switch
 			>&2 echo "ERROR: Unknown switch '$arg'"
@@ -82,6 +89,7 @@ tree \
 	-I ".git" \
 	--dirsfirst \
 	--fromfile \
+	-o "$output" \
 	. \
 	< "$lst_clean_tmp"
 
