@@ -10,12 +10,12 @@ set -Eeuo pipefail
 #set -Eeu
 
 APP_NAME="Listing of files to tree view converter"
+script_name="$(basename "$0")"
 
 # parameters
 
 function print_help() {
 
-	script_name="$(basename "$0")"
 	echo -e ""
 	echo -e "$APP_NAME - Given a file listing - as for example created by 'find',"
 	echo -e "generates a tree view."
@@ -58,7 +58,7 @@ do
 done
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-
+lst_clean_tmp=$(mktemp "/tmp/$script_name-clean_listing-XXXXXX.txt")
 while IFS= read -r line
 do
 	if [ -z "$line" ] || [[ $line =~ ^[#\;].* ]]
@@ -76,9 +76,13 @@ do
 		exit 1
 	fi
 	echo "$line"
-done | \
-	tree \
-		-I ".git" \
-		--dirsfirst \
-		--fromfile \
-		.
+done > "$lst_clean_tmp"
+
+tree \
+	-I ".git" \
+	--dirsfirst \
+	--fromfile \
+	. \
+	< "$lst_clean_tmp"
+
+rm "$lst_clean_tmp"
