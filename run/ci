@@ -10,6 +10,7 @@ set -Eeuo pipefail
 #set -Eeu
 
 script_dir=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
+build_dir="$(pwd)/build"
 
 APP_NAME="CI runner"
 
@@ -60,5 +61,7 @@ then
 	"$script_dir/test" "$@"
 else
 	"$script_dir/build" "$@"
+	echo "Files to be published to pages:"
+	find "$build_dir"
 fi
 
