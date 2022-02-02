@@ -11,6 +11,7 @@ set -Eeuo pipefail
 
 script_dir=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
 build_dir="$(pwd)/build"
+publish_dir="$(pwd)/public"
 
 APP_NAME="CI runner"
 
@@ -62,6 +63,8 @@ then
 else
 	"$script_dir/build" "$@"
 	echo "Files to be published to pages:"
-	find "$build_dir"
+	rm -Rf "$publish_dir"
+	mv "$build_dir" "$publish_dir"
+	find "$publish_dir"
 fi
 
