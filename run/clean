@@ -56,6 +56,6 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 
 if [ -d "$build_dir" ]
 then
-	rm -Rf "${build_dir:?}/*"
+	rm -Rf "${build_dir:?}/"*
 fi
 
