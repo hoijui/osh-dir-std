@@ -12,6 +12,7 @@ set -Eeuo pipefail
 APP_NAME="Listing of files to tree view converter"
 script_name="$(basename "$0")"
 output=/dev/stdout
+html=false
 
 # parameters
 
@@ -32,6 +33,8 @@ function print_help() {
 	echo -e "Options:"
 	echo -e "\t-o, --output [FILE]"
 	echo -e "\t\tSets the output file to write the tree to (default: '$output')"
+	echo -e "\t--html"
+	echo -e "\t\tWrite output as HTML (default: ASCII)"
 	echo -e "\t-h, --help"
 	echo -e "\t\tPrint this usage help and exit"
 	echo -e "Examples:"
@@ -53,6 +56,9 @@ do
 		-o|--output)
 			output="$1"
 			shift
+			;;
+		--html)
+			html=true
 			;;
 		-*) # unknown switch
 			>&2 echo "ERROR: Unknown switch '$arg'"
@@ -85,6 +91,14 @@ do
 	echo "$line"
 done > "$lst_clean_tmp"
 
+tree_extra_args=()
+if $html
+then
+	tree_extra_args+=("-H")
+	tree_extra_args+=(".")
+	tree_extra_args+=("--nolinks")
+fi
+
 tree \
 	-a \
 	-F \
@@ -92,6 +106,7 @@ tree \
 	-I ".git" \
 	--dirsfirst \
 	--fromfile \
+	"${tree_extra_args[@]}" \
 	-o "$output" \
 	. \
 	< "$lst_clean_tmp"
