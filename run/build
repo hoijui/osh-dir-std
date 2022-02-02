@@ -73,6 +73,7 @@ do
 		> "$build_mod_dir/listing.txt"
 	"$script_dir/lst2tree" \
 		--html \
+		--title "$(basename "$mod")" \
 		--output "$build_mod_dir/tree.html" \
 		< "$build_mod_dir/listing.txt"
 done
