@@ -72,8 +72,9 @@ do
 		"$mod/definition.csv" \
 		> "$build_mod_dir/listing.txt"
 	"$script_dir/lst2tree" \
-		< "$build_mod_dir/listing.txt" \
-		> "$build_mod_dir/tree.txt"
+		--html \
+		--output "$build_mod_dir/tree.html" \
+		< "$build_mod_dir/listing.txt"
 done
 
 mvd create_index \
