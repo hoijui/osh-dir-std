@@ -9,12 +9,12 @@ bom.csv,TRUE,TRUE,FALSE,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of
 assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe
 manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe
 recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,recycle\.vf_recipe\.ttl,ValueFlows recycling recipe
-run/,TRUE,TRUE,FALSE,TRUE,0.9,run,"Project maintenance scripts, preferably platform independent"
-run/build,TRUE,TRUE,FALSE,-,0.5,run/build,"Creates all output, including generated files and archives"
-run/clean,TRUE,TRUE,FALSE,-,0.5,run/clean,Deletes all generated files
-run/test,TRUE,TRUE,FALSE,-,0.5,run/test,"Runs potential unit- and integration tests, validation, linters and similar things"
-run/release,TRUE,TRUE,FALSE,-,0.5,run/release,"Creates a release for this project, including tagging and a release on the hosting platform, if any"
-run/ci,TRUE,TRUE,FALSE,-,0.5,run/ci,"Run by CI/Buildbot on each commit, but has to also be usable locally"
+run/,TRUE,TRUE,FALSE,TRUE,0.9,(run|exec?|scripts|bin),"Project maintenance scripts, preferably platform independent"
+run/build,TRUE,TRUE,FALSE,-,0.5,(run|exec?|scripts|bin)/build,"Creates all output, including generated files and archives"
+run/clean,TRUE,TRUE,FALSE,-,0.5,(run|exec?|scripts|bin)/clean,Deletes all generated files
+run/test,TRUE,TRUE,FALSE,-,0.5,(run|exec?|scripts|bin)/test,"Runs potential unit- and integration tests, validation, linters and similar things"
+run/release,TRUE,TRUE,FALSE,-,0.5,(run|exec?|scripts|bin)/release,"Creates a release for this project, including tagging and a release on the hosting platform, if any"
+run/ci,TRUE,TRUE,FALSE,-,0.5,(run|exec?|scripts|bin)/ci,"Run by CI/Buildbot on each commit, but has to also be usable locally"
 res/,TRUE,TRUE,FALSE,FALSE,0.7,res,"Stands for ""resources"", and should hold any files that are part of the sources of the project, but are not source code, design, scripts or documentation text files."
 res/some-config.xml,FALSE,TRUE,FALSE,-,0,res/[^/]+\.xml,"One possible location for configuration & settings files, e.g. 3D printer settings, log settings, ..."
 res/conf/,TRUE,TRUE,FALSE,TRUE,0.3,res/conf,Alternative location for configuration files -> TODO decision needed
@@ -60,16 +60,17 @@ src/mech/case.fcstd,FALSE,TRUE,FALSE,-,0,src/mech/.+\.fcstd,FreeCAD project
 src/mech/case-alternative.fcstd,FALSE,TRUE,FALSE,-,0,src/mech/.+\.fcstd,FreeCAD project
 src/mech/parts.lib,FALSE,TRUE,FALSE,-,0,src/mech/.+\.lib,FreeCAD parts library
 src/test/,TRUE,TRUE,FALSE,TRUE,0.3,src/test,Sources for unit- and integration tests for anything contained in this project (excluding the inner details of sub-modules)
-build/assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,build/assembly\.vf_recipe\.ttl,"alternative location, if generated - ValueFlows assembling recipe"
-build/manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,build/manu\.vf_recipe\.ttl,
-build/recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,build/recycle\.vf_recipe\.ttl,
-build/bom.csv,TRUE,FALSE,FALSE,-,0.2,build/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated"
-build/site/,TRUE,FALSE,FALSE,TRUE,0.2,build/site,
-build/doc/assembly/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/assembly,
-build/doc/man/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/man,
-build/doc/usr/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/usr,
-build/doc/recycling/,TRUE,FALSE,FALSE,TRUE,0.5,build/doc/recycling,
-build/export/,TRUE,FALSE,FALSE,TRUE,0.2,build/export,
+build/,TRUE,TRUE,FALSE,FALSE,0.1,(build|target),Where everything generated should en up; this is not tracked in git/SCM
+build/assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target)/assembly\.vf_recipe\.ttl,"alternative location, if generated - ValueFlows assembling recipe"
+build/manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target)/manu\.vf_recipe\.ttl,
+build/recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target)/recycle\.vf_recipe\.ttl,
+build/bom.csv,TRUE,FALSE,FALSE,-,0.2,(build|target)/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated"
+build/site/,TRUE,FALSE,FALSE,TRUE,0.2,(build|target)/(site|public),"Generated website of the project (for example, for hosting on github or gitlab pages)"
+build/doc/assembly/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/assembly,
+build/doc/man/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/man,
+build/doc/usr/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/usr,
+build/doc/recycling/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/recycling,
+build/export/,TRUE,FALSE,FALSE,TRUE,0.2,(build|target)/export,
 doc/,TRUE,TRUE,FALSE,FALSE,0.3,doc,
 doc/assembly/,TRUE,TRUE,FALSE,TRUE,0.5,doc/assembly,Assembly instructions sources
 doc/assembly/vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,doc/assembly/vf_recipe\.ttl,alternative location 2 - ValueFlows assembling recipe
