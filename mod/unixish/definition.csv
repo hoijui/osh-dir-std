@@ -3,7 +3,7 @@ LICENSES/,TRUE,TRUE,FALSE,FALSE,0.2,LICEN[SC]ES,REUSE license files (preferred o
 LICENSES/AGPL-3.0-or-later.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
 LICENSES/CC0-1.0.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
 LICENSES/Unlicense.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
-LICENSE.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)"
+LICENSE.txt,TRUE,TRUE,FALSE,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)"
 README.md,TRUE,TRUE,FALSE,-,0,README(\.(txt|md|rst))?,
 bom.csv,TRUE,TRUE,FALSE,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees "
 assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe
@@ -89,6 +89,6 @@ doc/recycling/,TRUE,TRUE,FALSE,TRUE,0.5,doc/recycling,Recycling instructions sou
 doc/recycling/main.md,FALSE,TRUE,FALSE,-,0,doc/recycling/.+\.md,
 doc/recycling/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/recycling/.+\.md,
 doc/recycling/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/recycling/.+\.md,
-mod/,TRUE,TRUE,TRUE,FALSE,0.9,mod,"Modules - In here might be git sub-modules or not, but either way, they have to follow the same dir structure as the main project, recursively"
+mod/,TRUE,TRUE,FALSE,FALSE,0.9,mod,"Modules - In here might be git sub-modules or not, but either way, they have to follow the same dir structure as the main project, recursively"
 mod/module-a/,FALSE,TRUE,TRUE,FALSE,0,mod/[^/]+,
 mod/module-b/,FALSE,TRUE,TRUE,FALSE,0,mod/[^/]+,
