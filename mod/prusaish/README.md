@@ -19,16 +19,27 @@ Most directories are named after the file-type
 ## Definition
 
 This standards machine-readable definition,
-which was derived manually from the thinking outlined below,
-can be found in the [definition.csv](definition.csv) file,
-While more palatable versions can be found at:
+can be found in various formats here:
 
+- [definition.csv](definition.csv)
+  ([format](../../definition_format.md))
+  \- source, machine-readable, contains all the data
+  \- **use this for editing**
 - [file-listing](
-  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/prusaish/listing.txt)
+  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/unixish/listing.txt)
+  \- like the output of `find` in a sample repo
+  \- generated
 - [tree](
-  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/prusaish/tree.html)
+  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/unixish/tree.html)
+  \- like the output of `tree` in a sample repo
+  \- generated, **recommended** for inspection
 
-# Inspirations
+## Guiding principles & Inspirations
+
+This standard is roughly derived from the [Prusa repo](
+https://github.com/prusa3d/Original-Prusa-i3)
+and [a few repos](https://github.com/fab-machines)
+[by Daniele Ingrassia](https://github.com/satshakit)
 
 Some of the inspirations:
 

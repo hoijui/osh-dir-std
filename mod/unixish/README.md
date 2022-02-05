@@ -14,16 +14,36 @@ and internally uses the same structure like the main project.
 ## Definition
 
 This standards machine-readable definition,
-which was derived manually from the thinking outlined below,
-can be found in the [definition.csv](definition.csv) file,
-While more palatable versions can be found at:
+can be found in various formats here:
 
+- [definition.csv](definition.csv)
+  ([format](../../definition_format.md))
+  \- source, machine-readable, contains all the data
+  \- **use this for editing**
 - [file-listing](
   https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/unixish/listing.txt)
+  \- like the output of `find` in a sample repo
+  \- generated
 - [tree](
   https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/unixish/tree.html)
+  \- like the output of `tree` in a sample repo
+  \- generated, **recommended** for inspection
 
-## Why modular
+## Guiding principles & Inspirations
+
+This standard is derived from the thinking outlined below,
+inspired by the following, well proven and established standards
+from the software world:
+
+- [Unix/Linux/BSD directory structure](
+  https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
+- [Maven directory structure](
+  https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+
+The main principle is ["Convention over configuration"](
+https://en.wikipedia.org/wiki/Convention_over_configuration).
+
+### Why modular
 
 It makes lots of things easier:
 
@@ -42,7 +62,7 @@ It makes lots of things easier:
   from time to time\
   -> smaller and faster clones
 
-## Why generic
+### Why generic
 
 It results in:
 
@@ -54,7 +74,7 @@ It results in:
 - leads to less "structure-bloat"
 - makes tooling easier and more robust
 
-## Guiding rules
+### Guiding rules
 
 - use singular forms;
   e.g. `asset`, not `assets`
@@ -64,7 +84,7 @@ It results in:
   instead of specific ones:
   e.g. `img`, not `drawing` or `photo`
 
-## Common directory names
+### Common directory names
 
 These are generic directory names,
 commonly found in soft- and hardware projects,
