@@ -1,4 +1,4 @@
-Path,Fixed,Source,Module,Arbitrary-Content,Indicativeness,Regex,Description
+Path,Fixed,Source,Module,ArbitraryContent,Indicativeness,Regex,Description
 bom/,TRUE,TRUE,FALSE,TRUE,0.5,bom,The BoM of the OSH
 bom/bom.csv,TRUE,TRUE,FALSE,-,0.5,bom/bom\.csv,"Structural, machine-readable, source"
 bom/bom.md,TRUE,TRUE,FALSE,-,0.5,bom/bom\.md,"human-readable, source"
