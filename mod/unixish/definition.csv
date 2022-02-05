@@ -60,17 +60,17 @@ src/mech/case.fcstd,FALSE,TRUE,FALSE,-,0,src/mech/.+\.fcstd,FreeCAD project
 src/mech/case-alternative.fcstd,FALSE,TRUE,FALSE,-,0,src/mech/.+\.fcstd,FreeCAD project
 src/mech/parts.lib,FALSE,TRUE,FALSE,-,0,src/mech/.+\.lib,FreeCAD parts library
 src/test/,TRUE,TRUE,FALSE,TRUE,0.3,src/test,Sources for unit- and integration tests for anything contained in this project (excluding the inner details of sub-modules)
-build/,TRUE,TRUE,FALSE,FALSE,0.1,(build|target),Where everything generated should en up; this is not tracked in git/SCM
-build/assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target)/assembly\.vf_recipe\.ttl,"alternative location, if generated - ValueFlows assembling recipe"
-build/manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target)/manu\.vf_recipe\.ttl,
-build/recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target)/recycle\.vf_recipe\.ttl,
-build/bom.csv,TRUE,FALSE,FALSE,-,0.2,(build|target)/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated"
-build/site/,TRUE,FALSE,FALSE,TRUE,0.2,(build|target)/(site|public),"Generated website of the project (for example, for hosting on github or gitlab pages)"
-build/doc/assembly/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/assembly,
-build/doc/man/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/man,
-build/doc/usr/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/usr,
-build/doc/recycling/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target)/doc/recycling,
-build/export/,TRUE,FALSE,FALSE,TRUE,0.2,(build|target)/export,
+build/,TRUE,TRUE,FALSE,FALSE,0.1,(build|target|out(put)?|gen(erated)?),Where everything generated should en up; this is not tracked in git/SCM
+build/assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target|out(put)?|gen(erated)?)/assembly\.vf_recipe\.ttl,"alternative location, if generated - ValueFlows assembling recipe"
+build/manuf.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target|out(put)?|gen(erated)?)/manuf\.vf_recipe\.ttl,
+build/recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,(build|target|out(put)?|gen(erated)?)/recycle\.vf_recipe\.ttl,
+build/bom.csv,TRUE,FALSE,FALSE,-,0.2,(build|target|out(put)?|gen(erated)?)/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated"
+build/site/,TRUE,FALSE,FALSE,TRUE,0.2,(build|target|out(put)?|gen(erated)?)/(site|public),"Generated website of the project (for example, for hosting on github or gitlab pages)"
+build/doc/assembly/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target|out(put)?|gen(erated)?)/doc/assembly,
+build/doc/manuf/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target|out(put)?|gen(erated)?)/doc/manuf(act(uring)?)?,
+build/doc/usr/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target|out(put)?|gen(erated)?)/doc/usr,
+build/doc/recycling/,TRUE,FALSE,FALSE,TRUE,0.5,(build|target|out(put)?|gen(erated)?)/doc/recycling,
+build/export/,TRUE,FALSE,FALSE,TRUE,0.2,(build|target|out(put)?|gen(erated)?)/export,"TODO What is this meant to be? -> Ask pieter and if no idea, delete!"
 doc/,TRUE,TRUE,FALSE,FALSE,0.3,doc,
 doc/assembly/,TRUE,TRUE,FALSE,TRUE,0.5,doc/assembly,Assembly instructions sources
 doc/assembly/vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,doc/assembly/vf_recipe\.ttl,alternative location 2 - ValueFlows assembling recipe
