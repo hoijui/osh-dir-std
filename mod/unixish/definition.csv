@@ -8,7 +8,7 @@ README.md,TRUE,TRUE,FALSE,-,0,README(\.(txt|md|rst))?,
 okh.toml,TRUE,TRUE,FALSE,-,0,okh\.(toml|ya?ml|json|ttl|rdf),manually maintained Open Know-How OSH project manifest (= meta-data file) ValueFlows recipees
 bom.csv,TRUE,TRUE,FALSE,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees "
 assembly.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe
-manu.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe
+manuf.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe
 recycle.vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,recycle\.vf_recipe\.ttl,ValueFlows recycling recipe
 run/,TRUE,TRUE,FALSE,TRUE,0.9,(run|exec?|scripts|bin),"Project maintenance scripts, preferably platform independent"
 run/build,TRUE,TRUE,FALSE,-,0.5,(run|exec?|scripts|bin)/build,"Creates all output, including generated files and archives"
@@ -79,10 +79,10 @@ doc/assembly/vf_recipe.ttl,TRUE,TRUE,FALSE,-,0.3,doc/assembly/vf_recipe\.ttl,alt
 doc/assembly/main.md,FALSE,TRUE,FALSE,-,0,doc/assembly/.+\.md,
 doc/assembly/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/assembly/.+\.md,
 doc/assembly/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/assembly/.+\.md,
-doc/manu/,TRUE,TRUE,FALSE,TRUE,0.5,doc/manu,Manufacturing instructions sources
-doc/manu/main.md,FALSE,TRUE,FALSE,-,0,doc/manu/.+\.md,
-doc/manu/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/manu/.+\.md,
-doc/manu/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/manu/.+\.md,
+doc/manuf/,TRUE,TRUE,FALSE,TRUE,0.5,doc/manuf(act(uring)?)?,Manufacturing instructions sources
+doc/manuf/main.md,FALSE,TRUE,FALSE,-,0,doc/manuf(act(uring)?)?/.+\.md,
+doc/manuf/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/manuf(act(uring)?)?/.+\.md,
+doc/manuf/chap-1/sec-2.md,FALSE,TRUE,FALSE,-,0,doc/manuf(act(uring)?)?/.+\.md,
 doc/usr/,TRUE,TRUE,FALSE,TRUE,0.5,doc/usr,"User manual (aka operation, repair & maintenance instructions -> split up?) sources"
 doc/usr/main.md,FALSE,TRUE,FALSE,-,0,doc/usr/.+\.md,
 doc/usr/chap-1/sec-1.md,FALSE,TRUE,FALSE,-,0,doc/usr/.+\.md,
