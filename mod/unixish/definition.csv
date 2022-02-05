@@ -1,4 +1,4 @@
-Path,Fixed (else: example),Source,Module-Dir,Arbitrary Sub-Dirs,Indicativeness (presence serves as an indicator of this dir-structure standard),Regex,Description
+Path,Fixed,Source,Module,Arbitrary-Content,Indicativeness,Regex,Description
 LICENSES/,TRUE,TRUE,FALSE,FALSE,0.2,LICEN[SC]ES,REUSE license files (preferred over single LICENSE file)
 LICENSES/AGPL-3.0-or-later.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
 LICENSES/CC0-1.0.txt,FALSE,TRUE,FALSE,-,0,LICEN[SC]ES/[^/]+.txt,
