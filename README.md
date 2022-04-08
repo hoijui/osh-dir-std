@@ -4,11 +4,11 @@ SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
 SPDX-License-Identifier: CC0-1.0
 -->
 
+# OSH project directory structure standards
+
 [![REUSE status](
     https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)](
     https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
-
-# OSH project directory structure standards
 
 ## Standards documented in this repo
 
