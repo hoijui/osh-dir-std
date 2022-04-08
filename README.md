@@ -26,7 +26,7 @@ SPDX-License-Identifier: CC0-1.0
   Most directories are named after the abstract/generic function
   of their content.
 
-# Other structure templates
+## Other structure templates
 
 - <https://www.sciencedirect.com/journal/hardwarex>
 - <https://osf.io/wgk7q/>
