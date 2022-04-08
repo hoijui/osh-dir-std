@@ -10,6 +10,16 @@ SPDX-License-Identifier: CC0-1.0
     https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)](
     https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
 
+## Motivation
+
+Why do we need directory standards?
+
+1. to be able to extract meta-data:
+    1. easy indexing (and thus finding) of projects
+    2. easy comparing of projects
+    3. allows to write software tools that deal with project repos
+2. find your way around quickly and easily in different projects
+
 ## Standards documented in this repo
 
 - [Prusaish](mod/prusaish/README.md):
@@ -36,4 +46,3 @@ SPDX-License-Identifier: CC0-1.0
 The most relevant content of this repo
 is licensed under the `GFDL-1.3-or-later`.
 use the reuse tool (`reuse spdx`) for more details.
-
