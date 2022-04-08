@@ -20,17 +20,17 @@ res/,true,true,false,false,0.7,res,"Stands for ""resources"", and should hold an
 res/some-config.xml,false,true,false,-,0,res/[^/]+\.xml,"One possible location for configuration & settings files, e.g. 3D printer settings, log settings, ..."
 res/conf/,true,true,false,true,0.3,res/conf,Alternative location for configuration files -> TODO decision needed
 res/conf/some-config.xml,false,true,false,-,0,res/conf/.+\.xml,
-res/media/,true,true,false,false,0.6,res/media,Non-binary and non-large media goes here. The sub-dirs within res/assets/ and res/ should be the same.
-res/media/img/,true,true,false,true,0.3,res/media/img,Non-binary and non-large media goes here. The sub-dirs within res/assets/ and res/ should be the same.
-res/media/img/diagram-1.svg,false,true,false,-,0,res/media/img/.+\.svg,Non-binary and non-large media goes here. The sub-dirs within res/assets/ and res/ should be the same.
-res/assets/,true,true,false,false,0.7,res/assets,"All binary and/or large resources should go here, as this allows to go ""clean-slate"" with this data from time to time, to reduce clone size, if done as a git sub-module (which can also be done later). Having it as a git sub-module, also allows to not fetch it at all, if storage or bandwidth is an issue, and it is not required for the task at hand."
-res/assets/media/,true,true,false,false,0.6,res/assets/media,
-res/assets/media/img/,true,true,false,true,0.3,res/assets/media/img,
-res/assets/media/img/drawing-1.png,false,true,false,-,0,res/assets/media/img/.+\.png,
-res/assets/media/img/animation-1.gif,false,true,false,-,0,res/assets/media/img/.+\.gif,
-res/assets/media/img/screenshot-1.jpg,false,true,false,-,0,res/assets/media/img/.+\.jpe?g,
-res/assets/var/,true,true,false,true,0.5,res/assets/var/,"Stands for ""various"", aka ""misc.""/""miscellaneous""; and should hold files that do not fit into any of the other resource categories."
-res/assets/var/datasheet-x.pdf,false,true,false,-,0,res/assets/var/.+\.pdf,
+res/media/,true,true,false,false,0.6,res/media,Non-binary and non-large media goes here. The sub-dirs within res/asset/ and res/ should be the same.
+res/media/img/,true,true,false,true,0.3,res/media/img,Non-binary and non-large media goes here. The sub-dirs within res/asset/ and res/ should be the same.
+res/media/img/diagram-1.svg,false,true,false,-,0,res/media/img/.+\.svg,Non-binary and non-large media goes here. The sub-dirs within res/asset/ and res/ should be the same.
+res/asset/,true,true,false,false,0.7,res/assets?,"All binary and/or large resources should go here, as this allows to go ""clean-slate"" with this data from time to time, to reduce clone size, if done as a git sub-module (which can also be done later). Having it as a git sub-module, also allows to not fetch it at all, if storage or bandwidth is an issue, and it is not required for the task at hand."
+res/asset/media/,true,true,false,false,0.6,res/assets?/media,
+res/asset/media/img/,true,true,false,true,0.3,res/assets?/media/img,
+res/asset/media/img/drawing-1.png,false,true,false,-,0,res/assets?/media/img/.+\.png,
+res/asset/media/img/animation-1.gif,false,true,false,-,0,res/assets?/media/img/.+\.gif,
+res/asset/media/img/screenshot-1.jpg,false,true,false,-,0,res/assets?/media/img/.+\.jpe?g,
+res/asset/var/,true,true,false,true,0.5,res/assets?/var/,"Stands for ""various"", aka ""misc.""/""miscellaneous""; and should hold files that do not fit into any of the other resource categories."
+res/asset/var/datasheet-x.pdf,false,true,false,-,0,res/assets?/var/.+\.pdf,
 src/anim/,true,true,false,true,0.4,src/anim,Animation sources - The generated animations would usually serve documentation
 src/anim/assembly.blend,false,true,false,-,0,src/anim/.+\.blend,Blender 3D source file
 src/calc/,true,true,false,true,0.4,src/calc,Calculation sources
