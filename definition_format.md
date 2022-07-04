@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
+SPDX-License-Identifier: GFDL-1.3-or-later
+-->
+
 # Dir standard meta-definition
 
 Here we describe the format of the [`mod/*/definition.csv`](
