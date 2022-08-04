@@ -1,96 +1,104 @@
-Path,Fixed,Source,Module,ArbitraryContent,Indicativeness,Regex,Description
-LICENSES/,true,true,false,false,0.2,LICEN[SC]ES,REUSE license files (preferred over single LICENSE file)
-LICENSES/AGPL-3.0-or-later.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,
-LICENSES/CC0-1.0.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,
-LICENSES/Unlicense.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,
-LICENSE.txt,true,true,false,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)"
-README.md,true,true,false,-,0,README(\.(txt|md|rst))?,
-okh.toml,true,true,false,-,0,okh\.(toml|ya?ml|json|ttl|rdf),manually maintained Open Know-How OSH project manifest (= meta-data file) ValueFlows recipees
-bom.csv,true,true,false,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees "
-assembly.vf_recipe.ttl,true,true,false,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe
-manuf.vf_recipe.ttl,true,true,false,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe
-recycle.vf_recipe.ttl,true,true,false,-,0.3,recycle\.vf_recipe\.ttl,ValueFlows recycling recipe
-run/,true,true,false,true,0.9,(run|exec?|scripts|bin),"Project maintenance scripts, preferably platform independent"
-run/build,true,true,false,-,0.5,(run|exec?|scripts|bin)/build,"Creates all output, including generated files and archives"
-run/clean,true,true,false,-,0.5,(run|exec?|scripts|bin)/clean,Deletes all generated files
-run/test,true,true,false,-,0.5,(run|exec?|scripts|bin)/test,"Runs potential unit- and integration tests, validation, linters and similar things"
-run/release,true,true,false,-,0.5,(run|exec?|scripts|bin)/release,"Creates a release for this project, including tagging and a release on the hosting platform, if any"
-run/ci,true,true,false,-,0.5,(run|exec?|scripts|bin)/ci,"Run by CI/Buildbot on each commit, but has to also be usable locally"
-res/,true,true,false,false,0.7,res,"Stands for ""resources"", and should hold any files that are part of the sources of the project, but are not source code, design, scripts or documentation text files."
-res/some-config.xml,false,true,false,-,0,res/[^/]+\.xml,"One possible location for configuration & settings files, e.g. 3D printer settings, log settings, ..."
-res/conf/,true,true,false,true,0.3,res/conf,Alternative location for configuration files -> TODO decision needed
-res/conf/some-config.xml,false,true,false,-,0,res/conf/.+\.xml,
-res/media/,true,true,false,false,0.6,res/media,Non-binary and non-large media goes here. The sub-dirs within res/asset/ and res/ should be the same.
-res/media/img/,true,true,false,true,0.3,res/media/img,Non-binary and non-large media goes here. The sub-dirs within res/asset/ and res/ should be the same.
-res/media/img/diagram-1.svg,false,true,false,-,0,res/media/img/.+\.svg,Non-binary and non-large media goes here. The sub-dirs within res/asset/ and res/ should be the same.
-res/asset/,true,true,false,false,0.7,res/assets?,"All binary and/or large resources should go here, as this allows to go ""clean-slate"" with this data from time to time, to reduce clone size, if done as a git sub-module (which can also be done later). Having it as a git sub-module, also allows to not fetch it at all, if storage or bandwidth is an issue, and it is not required for the task at hand."
-res/asset/media/,true,true,false,false,0.6,res/assets?/media,
-res/asset/media/img/,true,true,false,true,0.3,res/assets?/media/img,
-res/asset/media/img/drawing-1.png,false,true,false,-,0,res/assets?/media/img/.+\.png,
-res/asset/media/img/animation-1.gif,false,true,false,-,0,res/assets?/media/img/.+\.gif,
-res/asset/media/img/screenshot-1.jpg,false,true,false,-,0,res/assets?/media/img/.+\.jpe?g,
-res/asset/var/,true,true,false,true,0.5,res/assets?/var/,"Stands for ""various"", aka ""misc.""/""miscellaneous""; and should hold files that do not fit into any of the other resource categories."
-res/asset/var/datasheet-x.pdf,false,true,false,-,0,res/assets?/var/.+\.pdf,
-src/anim/,true,true,false,true,0.4,src/anim,Animation sources - The generated animations would usually serve documentation
-src/anim/assembly.blend,false,true,false,-,0,src/anim/.+\.blend,Blender 3D source file
-src/calc/,true,true,false,true,0.4,src/calc,Calculation sources
-src/calc/required-material-thickness.m,false,true,false,-,0,src/calc/.+\.m,Octave (or Matlab) calculations file
-src/sim/,true,true,false,true,0.4,src/sim,Simulation sources
-src/sim/stress-test.OpenFOAM,false,true,false,-,0,src/sim/.+\.OpenFOAM,
-src/elec/,true,true,false,true,0.8,src/elec,"Electronic ""blueprints"""
-src/elec/main.pro,false,true,false,-,0,src/elec/.+\.pro,KiCad project file
-src/elec/main.sch,false,true,false,-,0,src/elec/.+\.sch,KiCad schematics file
-src/elec/main.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,KiCad PCB file
-src/elec/plate.pro,false,true,false,-,0,src/elec/.+\.pro,
-src/elec/plate.sch,false,true,false,-,0,src/elec/.+\.sch,
-src/elec/plate.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,
-src/elec/main-subs/,false,true,false,true,0,src/elec/[^/]+,"Electronic ""blueprints"" arbitrary sub-dir"
-src/elec/main-subs/sub-a.pro,false,true,false,-,0,src/elec/.+\.pro,
-src/elec/main-subs/sub-a.sch,false,true,false,-,0,src/elec/.+\.sch,
-src/elec/main-subs/sub-a.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,
-src/elec/main-subs/sub-b.pro,false,true,false,-,0,src/elec/.+\.pro,
-src/elec/main-subs/sub-b.sch,false,true,false,-,0,src/elec/.+\.sch,
-src/elec/main-subs/sub-b.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,
-src/elec/main-subs/parts.lib,false,true,false,-,0,src/elec/.+\.lib,KiCad parts library
-src/firmware/,true,true,false,true,0.4,src/firmware,Firmware sources
-src/firmware/main.c,false,true,false,-,0,src/firmware/.+\.c,
-src/firmware/other.h,false,true,false,-,0,src/firmware/.+\.h,
-src/firmware/other.c,false,true,false,-,0,src/firmware/.+\.c,
-src/mech/,true,true,false,true,0.8,src/mech,"Mechanical ""blueprints"""
-src/mech/case.fcstd,false,true,false,-,0,src/mech/.+\.fcstd,FreeCAD project
-src/mech/case-alternative.fcstd,false,true,false,-,0,src/mech/.+\.fcstd,FreeCAD project
-src/mech/parts.lib,false,true,false,-,0,src/mech/.+\.lib,FreeCAD parts library
-src/test/,true,true,false,true,0.3,src/test,Sources for unit- and integration tests for anything contained in this project (excluding the inner details of sub-modules)
-build/,true,true,false,false,0.1,(build|target|out(put)?|gen(erated)?),Where everything generated should en up; this is not tracked in git/SCM
-build/assembly.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/assembly\.vf_recipe\.ttl,"alternative location, if generated - ValueFlows assembling recipe"
-build/manuf.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/manuf\.vf_recipe\.ttl,
-build/recycle.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/recycle\.vf_recipe\.ttl,
-build/okh.toml,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?)/okh\.(toml|ya?ml|json|ttl|rdf),"alternative location, if generated"
-build/bom.csv,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?)/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated"
-build/site/,true,false,false,true,0.2,(build|target|out(put)?|gen(erated)?)/(site|public),"Generated website of the project (for example, for hosting on github or gitlab pages)"
-build/doc/assembly/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/assembly,
-build/doc/manuf/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/manuf(act(uring)?)?,
-build/doc/usr/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/usr,
-build/doc/recycling/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/recycling,
-build/export/,true,false,false,true,0.2,(build|target|out(put)?|gen(erated)?)/export,"TODO What is this meant to be? -> Ask pieter and if no idea, delete!"
-doc/,true,true,false,false,0.3,doc,
-doc/assembly/,true,true,false,true,0.5,doc/assembly,Assembly instructions sources
-doc/assembly/vf_recipe.ttl,true,true,false,-,0.3,doc/assembly/vf_recipe\.ttl,alternative location 2 - ValueFlows assembling recipe
-doc/assembly/main.md,false,true,false,-,0,doc/assembly/.+\.md,
-doc/assembly/chap-1/sec-1.md,false,true,false,-,0,doc/assembly/.+\.md,
-doc/assembly/chap-1/sec-2.md,false,true,false,-,0,doc/assembly/.+\.md,
-doc/manuf/,true,true,false,true,0.5,doc/manuf(act(uring)?)?,Manufacturing instructions sources
-doc/manuf/main.md,false,true,false,-,0,doc/manuf(act(uring)?)?/.+\.md,
-doc/manuf/chap-1/sec-1.md,false,true,false,-,0,doc/manuf(act(uring)?)?/.+\.md,
-doc/manuf/chap-1/sec-2.md,false,true,false,-,0,doc/manuf(act(uring)?)?/.+\.md,
-doc/usr/,true,true,false,true,0.5,doc/usr,"User manual (aka operation, repair & maintenance instructions -> split up?) sources"
-doc/usr/main.md,false,true,false,-,0,doc/usr/.+\.md,
-doc/usr/chap-1/sec-1.md,false,true,false,-,0,doc/usr/.+\.md,
-doc/usr/chap-1/sec-2.md,false,true,false,-,0,doc/usr/.+\.md,
-doc/recycling/,true,true,false,true,0.5,doc/recycling,Recycling instructions sources
-doc/recycling/main.md,false,true,false,-,0,doc/recycling/.+\.md,
-doc/recycling/chap-1/sec-1.md,false,true,false,-,0,doc/recycling/.+\.md,
-doc/recycling/chap-1/sec-2.md,false,true,false,-,0,doc/recycling/.+\.md,
-mod/,true,true,false,false,0.9,mod,"Modules - In here might be git sub-modules or not, but either way, they have to follow the same dir structure as the main project, recursively"
-mod/module-a/,false,true,true,false,0,mod/[^/]+,
-mod/module-b/,false,true,true,false,0,mod/[^/]+,
+Path,Fixed,Source,Module,ArbitraryContent,Indicativeness,Regex,Description,Sample Content
+LICENSES/,true,true,false,false,0.2,LICEN[SC]ES,REUSE license files (preferred over single LICENSE file),
+LICENSES/AGPL-3.0-or-later.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://www.gnu.org/licenses/agpl-3.0.txt
+LICENSES/CC0-1.0.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt
+LICENSES/Unlicense.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://unlicense.org/
+LICENSE.txt,true,true,false,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)",https://www.gnu.org/licenses/agpl-3.0.txt
+README.md,true,true,false,-,0,README(\.(txt|md|rst))?,,https://gitlab.com/OSEGermany/ohloom/-/raw/master/README.md
+okh.toml,true,true,false,-,0,okh\.(toml|ya?ml|json|ttl|rdf),manually maintained Open Know-How OSH project manifest (= meta-data file) ValueFlows recipees,https://gitlab.com/OSEGermany/ohloom/-/raw/master/okh.toml
+bom.csv,true,true,false,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees ",https://gitlab.com/OSEGermany/ohloom/-/raw/master/sBoM.csv
+assembly.vf_recipe.ttl,true,true,false,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe,
+manuf.vf_recipe.ttl,true,true,false,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe,
+recycle.vf_recipe.ttl,true,true,false,-,0.3,recycle\.vf_recipe\.ttl,ValueFlows recycling recipe,
+run/,true,true,false,true,0.9,(run|exec?|scripts|bin),"Project maintenance scripts, preferably platform independent",
+run/build,true,true,false,-,0.5,(run|exec?|scripts|bin)/build,"Creates all output, including generated files and archives",cd src/software/control_lib/; cargo build --release
+run/clean,true,true,false,-,0.5,(run|exec?|scripts|bin)/clean,Deletes all generated files,
+run/test,true,true,false,-,0.5,(run|exec?|scripts|bin)/test,"Runs potential unit- and integration tests, validation, linters and similar things",
+run/release,true,true,false,-,0.5,(run|exec?|scripts|bin)/release,"Creates a release for this project, including tagging and a release on the hosting platform, if any",
+run/ci,true,true,false,-,0.5,(run|exec?|scripts|bin)/ci,"Run by CI/Buildbot on each commit, but has to also be usable locally",apt-get install cargo; run/build
+res/,true,true,false,false,0.7,res,"Stands for ""resources"", and should hold any files that are part of the sources of the project, but are not source code, design, scripts or documentation text files. This includes also binary files, next to text files. The sub-dirs within res/assets/ and res/ should be the same (excluding of course res/assets/assets/).",
+res/conf/,true,true,false,true,0.3,res/conf,"Configuration & settings files, e.g. 3D printer settings, log settings, ...",
+res/conf/some-config.xml,false,true,false,-,0,res/conf/.+\.xml,,https://raw.githubusercontent.com/xiaoxpai/mbp_first_code/master/mbp-struts2-spring-init/src/main/resources/log4j2.xml
+res/media/,true,true,false,false,0.6,res/media,"Non-binary (and usually rather small) media goes here. Media are (mainly) images, audio recordings and videos.",
+res/media/img/,true,true,false,true,0.3,res/media/img,Non-binary (and usually rather small) images go here.,
+res/media/img/diagram-1.svg,false,true,false,-,0,res/media/img/.+\.svg,,https://www.svgrepo.com/show/185/diagram.svg
+res/assets/,true,true,false,false,0.7,res/assets?,"All binary (and potentially large text-)resources should go here, as this allows to go ""clean-slate"" with this data from time to time, to reduce clone size, if done as a git sub-module (which can also be done later). Having it as a git sub-module, also allows to not fetch it at all, if storage or bandwidth is an issue, and it is not required for the task at hand. The sub-dirs within res/assets/ and res/ should be the same (excluding of course res/assets/assets/).",
+res/assets/media/,true,true,false,false,0.6,res/assets?/media,,
+res/assets/media/img/,true,true,false,true,0.3,res/assets?/media/img,,
+res/assets/media/img/drawing-1.png,false,true,false,-,0,res/assets?/media/img/.+\.png,,https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png
+res/assets/media/img/animation-1.gif,false,true,false,-,0,res/assets?/media/img/.+\.gif,,https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif
+res/assets/media/img/screenshot-1.jpg,false,true,false,-,0,res/assets?/media/img/.+\.jpe?g,,https://www.adslzone.net/app/uploads-adslzone.net/2021/11/todo-sobre-jpg-930x487.jpg
+res/assets/media/vid/,true,true,false,true,0.3,res/assets?/media/vid,,
+res/assets/media/vid/tutorial.webm,false,true,false,-,0,res/assets?/media/vid/.+\.(webm|mp4),,https://file-examples.com/wp-content/uploads/2020/03/file_example_WEBM_480_900KB.webm
+res/assets/var/,true,true,false,true,0.5,res/assets?/var/,"Stands for ""various"", aka ""misc.""/""miscellaneous""; and should hold files that do not fit into any of the other resource categories.",
+res/assets/var/datasheet-x.pdf,false,true,false,-,0,res/assets?/var/.+\.pdf,,https://www.infineon.com/dgdl/Infineon-IRS2304-DataSheet-v01_00-EN.pdf
+src/,true,true,false,false,0.7,src,"Source files - Editable files (Think: Word, not PDF)",
+src/anim/,true,true,false,true,0.4,src/anim,Animation sources - The generated animations would usually serve documentation,
+src/anim/assembly.blend,false,true,false,-,0,src/anim/.+\.blend,Blender 3D source file,https://github.com/PacktPublishing/Blender-3D-Modeling-and-Animation-Build-20-3D-Projects-in-Blender/blob/master/CODES/Project%2010%20-%20Box%20animation/boxOpenCourse.blend?raw=true
+src/calc/,true,true,false,true,0.4,src/calc,Calculation sources,
+src/calc/required-material-thickness.m,false,true,false,-,0,src/calc/.+\.m,Octave (or Matlab) calculations file,https://github.com/mathworks-robotics/trajectory-planning-robot-manipulators/raw/master/startupExample.m
+src/calc/feedback-evaluation.ods,false,true,false,-,0,src/calc/.+\.(ods|xlsx),LibreOffice spread-sheet/table file with calculations,https://github.com/miachm/SODS/blob/master/resources/floatfontsize.ods?raw=true
+src/sim/,true,true,false,true,0.4,src/sim,Simulation sources,
+src/sim/stress-test.OpenFOAM,false,true,false,-,0,src/sim/.+\.OpenFOAM,,https://github.com/alda30/OpenFoam-examples/blob/master/(01)cavity/0/U
+src/elec/,true,true,false,true,0.8,src/elec,"Electronic ""blueprints"" - Schemas & PCBs",
+src/elec/main.pro,false,true,false,-,0,src/elec/.+\.pro,KiCad project file,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.pro
+src/elec/main.sch,false,true,false,-,0,src/elec/.+\.sch,KiCad schematics file,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.sch
+src/elec/main.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,KiCad PCB file,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.kicad_pcb
+src/elec/plate.pro,false,true,false,-,0,src/elec/.+\.pro,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.pro
+src/elec/plate.sch,false,true,false,-,0,src/elec/.+\.sch,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.sch
+src/elec/plate.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.kicad_pcb
+src/elec/main-subs/,false,true,false,true,0,src/elec/[^/]+,"Electronic ""blueprints"" arbitrary sub-dir",
+src/elec/main-subs/sub-a.pro,false,true,false,-,0,src/elec/.+\.pro,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.pro
+src/elec/main-subs/sub-a.sch,false,true,false,-,0,src/elec/.+\.sch,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.sch
+src/elec/main-subs/sub-a.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.kicad_pcb
+src/elec/main-subs/sub-b.pro,false,true,false,-,0,src/elec/.+\.pro,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.pro
+src/elec/main-subs/sub-b.sch,false,true,false,-,0,src/elec/.+\.sch,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.sch
+src/elec/main-subs/sub-b.kicad_pcb,false,true,false,-,0,src/elec/.+\.kicad_pcb,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.kicad_pcb
+src/elec/main-subs/parts.lib,false,true,false,-,0,src/elec/.+\.lib,KiCad parts library,
+src/firmware/,true,true,false,true,0.4,src/firmware,Firmware sources,
+src/firmware/Makefile,false,true,false,-,0,src/firmware/Makefile,,
+src/firmware/main.c,false,true,false,-,0,src/firmware/.+\.c,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/ipip.c
+src/firmware/other.h,false,true,false,-,0,src/firmware/.+\.h,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/ipip.h
+src/firmware/other.c,false,true,false,-,0,src/firmware/.+\.c,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/test.c
+src/mech/,true,true,false,true,0.8,src/mech,"Mechanical ""blueprints"" - Computer Aided Design (CAD) files",
+src/mech/case.fcstd,false,true,false,-,0,src/mech/.+\.fcstd,FreeCAD project,https://github.com/case06/ZACplus/blob/master/cadfiles/kammer/kammer_00.fcstd?raw=true
+src/mech/case-alternative.fcstd,false,true,false,-,0,src/mech/.+\.fcstd,FreeCAD project,https://github.com/case06/ZACplus/blob/master/cadfiles/kammer/kammer_01.fcstd?raw=true
+src/mech/parts.lib,false,true,false,-,0,src/mech/.+\.lib,FreeCAD parts library,
+src/mech/pieceX.scad,false,true,false,-,0,src/mech/.+\.scad,OpenSCAD source file - Open Source CAD defined in code,https://gitlab.com/OSEGermany/ohloom/-/raw/master/3DParts/PoleBase/PoleBase.scad
+src/software/,true,true,false,true,0.4,src/software,Firmware sources,
+src/software/control_lib/Cargo.toml,false,true,false,-,0,src/software/control_lib/Cargo.toml,A sample Rust Software - Project file,https://github.com/hoijui/mle/raw/develop/Cargo.toml
+src/software/control_lib/src/main.rs,false,true,false,-,0,src/software/control_lib/src/.+\.rs,A sample Rust Software - Source file,https://github.com/hoijui/mle/raw/develop/src/main.rs
+src/test/,true,true,false,true,0.3,src/test,Sources for unit- and integration tests for anything contained in this project (excluding the inner details of sub-modules),
+build/,true,true,false,false,0.1,(build|target|out(put)?|gen(erated)?),Where everything generated should en up; this is not tracked in git/SCM,
+build/assembly.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/assembly\.vf_recipe\.ttl,"alternative location, if generated - ValueFlows assembling recipe",
+build/manuf.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/manuf\.vf_recipe\.ttl,,
+build/recycle.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/recycle\.vf_recipe\.ttl,,
+build/okh.toml,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?)/okh\.(toml|ya?ml|json|ttl|rdf),"alternative location, if generated",
+build/bom.csv,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?)/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated",
+build/site/,true,false,false,true,0.2,(build|target|out(put)?|gen(erated)?)/(site|public),"Generated website of the project (for example, for hosting on github or gitlab pages)",
+build/doc/assembly/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/assembly,,
+build/doc/manuf/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/manuf(act(uring)?)?,,
+build/doc/usr/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/usr,,
+build/doc/recycling/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/recycling,,
+build/export/,true,false,false,true,0.2,(build|target|out(put)?|gen(erated)?)/export,"TODO What is this meant to be? -> Ask pieter and if no idea, delete!",
+doc/,true,true,false,false,0.3,doc,"Documentation sources - How to use, build, repair, ... the piece of hardware described by the project",
+doc/assembly/,true,true,false,true,0.5,doc/assembly,"Assembly instructions manual sources - Assembly means: You have all the parts available (bought, printed, milled, ...), and now want to put them together. So this is like a LEGO or IKEA manual. See also: doc/manuf/.",
+doc/assembly/vf_recipe.ttl,true,true,false,-,0.3,doc/assembly/vf_recipe\.ttl,alternative location 2 - ValueFlows assembling recipe,
+doc/assembly/main.md,false,true,false,-,0,doc/assembly/.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
+doc/assembly/chap-1/sec-1.md,false,true,false,-,0,doc/assembly/.+\.md,,![image X](../../../res/assets/media/img/drawing-1.png)
+doc/assembly/chap-1/sec-2.md,false,true,false,-,0,doc/assembly/.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
+doc/manuf/,true,true,false,true,0.5,doc/manuf(act(uring)?)?,"Manufacturing instructions manual sources - Manufacturing means: Details about how to get from the sources under src/elec/ and src/mech/ to the actual parts, so this contains the meta-data about, and describes the process of 3D-printing, milling, carving, ... the individual parts. See also: doc/assembly/.",
+doc/manuf/main.md,false,true,false,-,0,doc/manuf(act(uring)?)?/.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
+doc/manuf/chap-1/sec-1.md,false,true,false,-,0,doc/manuf(act(uring)?)?/.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
+doc/manuf/chap-1/sec-2.md,false,true,false,-,0,doc/manuf(act(uring)?)?/.+\.md,,![image X](../../../res/assets/media/img/animation-1.gif)
+doc/usr/,true,true,false,true,0.5,doc/usr,"User manual (aka operation, repair & maintenance instructions -> split up?) sources",
+doc/usr/main.md,false,true,false,-,0,doc/usr/.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
+doc/usr/chap-1/sec-1.md,false,true,false,-,0,doc/usr/.+\.md,,![image X](../../../res/assets/media/img/drawing-1.png)
+doc/usr/chap-1/sec-2.md,false,true,false,-,0,doc/usr/.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
+doc/recycling/,true,true,false,true,0.5,doc/recycling,Recycling instructions sources,
+doc/recycling/main.md,false,true,false,-,0,doc/recycling/.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
+doc/recycling/chap-1/sec-1.md,false,true,false,-,0,doc/recycling/.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
+doc/recycling/chap-1/sec-2.md,false,true,false,-,0,doc/recycling/.+\.md,,![image X](../../../res/assets/media/img/animation-1.gif)
+mod/,true,true,false,false,0.9,mod,"Modules - In here might be git sub-modules or not, but either way, they have to follow the same dir structure as the main project",
+mod/module-a/,false,true,true,false,0,mod/[^/]+,,
+mod/module-b/,false,true,true,false,0,mod/[^/]+,,
