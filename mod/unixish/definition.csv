@@ -81,7 +81,7 @@ build/doc/manuf/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)
 build/doc/usr/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/usr,,
 build/doc/recycling/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/recycling,,
 build/export/,true,false,false,true,0.2,(build|target|out(put)?|gen(erated)?)/export,"TODO What is this meant to be? -> Ask pieter and if no idea, delete!",
-doc/,true,true,false,false,0.3,doc,"Documentation sources - How to use, build, repair, ... the piece of hardware described by the project",
+doc/,true,true,false,false,0.3,doc,"Documentation sources - How to use, build, repair, ... the piece of hardware described by the project. Below here, there should only be Markdown files (*maybe* also ValueFlows recipes).",
 doc/assembly/,true,true,false,true,0.5,doc/assembly,"Assembly instructions manual sources - Assembly means: You have all the parts available (bought, printed, milled, ...), and now want to put them together. So this is like a LEGO or IKEA manual. See also: doc/manuf/.",
 doc/assembly/vf_recipe.ttl,true,true,false,-,0.3,doc/assembly/vf_recipe\.ttl,alternative location 2 - ValueFlows assembling recipe,
 doc/assembly/main.md,false,true,false,-,0,doc/assembly/.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
