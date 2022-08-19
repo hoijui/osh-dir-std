@@ -62,6 +62,7 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 if [ -z "${1:-}" ]
 then
 	>&2 echo "ERROR: Please supply path to input file (definition.csv)."
+	exit 1
 fi
 input_file="$1"
 
