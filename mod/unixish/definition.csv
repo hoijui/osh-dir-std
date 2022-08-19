@@ -99,6 +99,8 @@ doc/recycling/,true,true,false,true,0.5,doc/recycling,Recycling instructions sou
 doc/recycling/main.md,false,true,false,-,0,doc/recycling/.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
 doc/recycling/chap-1/sec-1.md,false,true,false,-,0,doc/recycling/.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
 doc/recycling/chap-1/sec-2.md,false,true,false,-,0,doc/recycling/.+\.md,,![image X](../../../res/assets/media/img/animation-1.gif)
+doc/workshops/,true,true,false,true,0.5,doc/workshops?,"Contains arbitrarily named dirs that each contains a workshop documentation",
+doc/workshops/build/main.md,false,true,false,-,0,doc/workshops?/.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
 mod/,true,true,false,false,0.9,mod,"Modules - In here might be git sub-modules or not, but either way, they have to follow the same dir structure as the main project",
 mod/module-a/,false,true,true,false,0,mod/[^/]+,,
 mod/module-b/,false,true,true,false,0,mod/[^/]+,,
