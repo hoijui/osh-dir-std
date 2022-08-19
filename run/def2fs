@@ -1,0 +1,170 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2022 Robin Vobruba <hoijui.quaero@gmail.com>
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# See the output of "$0 -h" for details.
+
+# Exit immediately on each error and unset variable;
+# see: https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+set -Eeuo pipefail
+#set -Eeu
+
+APP_NAME="definition (CSV) to File-System+READMEs converter"
+CACHE_ROOT="$HOME/.cache/$(basename "$0")"
+
+# parameters
+
+function print_help() {
+
+	script_name="$(basename "$0")"
+	echo -e ""
+	echo -e "$APP_NAME - Given a definition.csv (as found in mod/*/definition.csv'),"
+	echo -e "creates the actual file-system representation of it,"
+	echo -e "and a README.md with the description text in each directory,"
+	echo -e "respectively it puts the description text as the content of the sample files."
+	echo -e ""
+	echo -e "Usage:"
+	echo -e "\t$script_name [OPTION...] <definition-csv-file> [output-dir]"
+	echo -e "Options:"
+	echo -e "\t-h, --help"
+	echo -e "\t\tPrint this usage help and exit"
+	echo -e "Examples:"
+	echo -e "\t$script_name mod/unixish/definition.csv /tmp/dir-std-unixish"
+	echo -e ""
+}
+
+# Process command line arguments
+while [[ $# -gt 0 ]]
+do
+	arg="$1"
+	shift # $2 -> $1, $3 -> $2, ...
+
+	case "$arg" in
+		-h|--help)
+			print_help
+			exit 0
+			;;
+		-*) # unknown switch
+			>&2 echo "ERROR: Unknown switch '$arg'"
+			exit 1
+			;;
+		*) # non-switch
+			POSITIONAL+=("$arg") # save it in an array for later
+			;;
+	esac
+done
+set -- "${POSITIONAL[@]}" # restore positional parameters
+
+if ! which curl > /dev/null
+then
+	>&2 echo 'ERROR: Tool "curl" not found; Please install it with "sudo apt install curl"'
+	exit 1
+fi
+
+if ! which csvcut > /dev/null
+then
+	>&2 echo 'ERROR: Tool "csvcut" not found; Please install it with "sudo pip install csvkit"'
+	exit 1
+fi
+
+if ! which jq > /dev/null
+then
+	>&2 echo 'ERROR: Tool "jq" not found; Please install it with "sudo apt install jq"'
+	exit 1
+fi
+
+if [ -z "${1:-}" ]
+then
+	>&2 echo 'ERROR: Please supply path to input file (definition.csv).'
+	exit 1
+fi
+input_file="$1"
+out_root="${2:-$(pwd)}"
+
+echo
+echo "Input file: '$input_file'"
+echo "Output dir: '$out_root'"
+echo
+
+# Dirs only
+for row in $(csvgrep \
+	-c Path \
+	--regex '/$' \
+	"$input_file" \
+	| csvcut \
+		-c Path,Description,"Sample Content" \
+		| csvjson \
+		| jq -r '.[] | @base64')
+do
+	function _col() {
+		echo "$row" | base64 --decode | jq -r "{\"$1\"}[]"
+	}
+	printf '.'
+	path="$(_col "Path")"
+	desc="$(_col "Description")"
+	cont="$(_col "Sample Content")"
+	out_path="$out_root/$path"
+	mkdir -p "$out_path"
+	rdm="$out_path/README.md"
+	if ! [ "$cont" = "null" ]
+	then
+		>&2 echo "ERROR: 'Sample Content' of dirs should always be empty/none/null, but is not for '$out_path'!"
+		exit 1
+	fi
+	if ! [ -f "$rdm" ]
+	then
+		{
+			echo '# README `'"$path"'`'
+			echo
+			echo "$desc"
+			echo
+		} > "$rdm"
+	fi
+done
+echo
+
+# Files only
+mkdir -p "$CACHE_ROOT"
+for row in $(csvgrep \
+	-c Path \
+	--regex '/$' \
+	-i \
+	"$input_file" \
+	| csvcut \
+		-c Path,Description,"Sample Content" \
+		| csvjson \
+		| jq -r '.[] | @base64')
+do
+	function _col() {
+		echo "$row" | base64 --decode | jq -r "{\"$1\"}[]"
+	}
+	printf '.'
+	path="$(_col "Path")"
+	desc="$(_col "Description")"
+	cont="$(_col "Sample Content")"
+	if [ "$path" = "null" ]
+	then
+		continue
+	fi
+	out_file="$out_root/$path"
+	mkdir -p "$(dirname "$out_file")"
+	if [[ $cont == http* ]]
+	then
+		url_hash=$(echo "$cont" | sha1sum)
+		cont_cache="$CACHE_ROOT/$url_hash"
+		if ! [ -e "$cont_cache" ]
+		then
+			curl "$cont" --output "$cont_cache"
+		fi
+		cp "$cont_cache" "$out_file"
+	else
+		if [ "$cont" = "null" ]
+		then
+			cont=""
+		fi
+		echo "$cont" > "$out_file"
+	fi
+done
+echo
+
+echo "done."
