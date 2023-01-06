@@ -6,7 +6,7 @@ LICENSES/Unlicense.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://unlic
 LICENSE.txt,true,true,false,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)",https://www.gnu.org/licenses/agpl-3.0.txt
 README.md,true,true,false,-,0,README(\.(txt|md|rst))?,,https://gitlab.com/OSEGermany/ohloom/-/raw/master/README.md
 okh.toml,true,true,false,-,0,okh\.(toml|ya?ml|json|ttl|rdf),manually maintained Open Know-How OSH project manifest (= meta-data file) ValueFlows recipees,https://gitlab.com/OSEGermany/ohloom/-/raw/master/okh.toml
-bom.csv,true,true,false,-,0,[bB][oO][mM]\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees ",https://gitlab.com/OSEGermany/ohloom/-/raw/master/sBoM.csv
+bom.csv,true,true,false,-,0,([bB][oO][mM]|[bB]ill_?[oO]f_?[mM]aterials)\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees ",https://gitlab.com/OSEGermany/ohloom/-/raw/master/sBoM.csv
 assembly.vf_recipe.ttl,true,true,false,-,0.3,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe,
 manuf.vf_recipe.ttl,true,true,false,-,0.3,manu\.vf_recipe\.ttl,ValueFlows manufacturing recipe,
 recycle.vf_recipe.ttl,true,true,false,-,0.3,recycle\.vf_recipe\.ttl,ValueFlows recycling recipe,
@@ -74,7 +74,7 @@ build/assembly.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(e
 build/manuf.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/manuf\.vf_recipe\.ttl,,
 build/recycle.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erated)?)/recycle\.vf_recipe\.ttl,,
 build/okh.toml,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?)/okh\.(toml|ya?ml|json|ttl|rdf),"alternative location, if generated",
-build/bom.csv,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?)/[bB][oO][mM]\.(csv|tsv),"alternative location, if generated",
+build/bom.csv,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?)/([bB][oO][mM]|[bB]ill_?[oO]f_?[mM]aterials)\.(csv|tsv),"alternative location, if generated",
 build/site/,true,false,false,true,0.2,(build|target|out(put)?|gen(erated)?)/(site|public),"Generated website of the project (for example, for hosting on github or gitlab pages)",
 build/doc/assembly/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/assembly,,
 build/doc/manuf/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?)/doc/manuf(act(uring)?)?,,
