@@ -1,5 +1,5 @@
 Path,Fixed,Source,Module,ArbitraryContent,Indicativeness,Regex,Description,Sample Content
-LICENSES/,true,true,false,false,0.2,LICEN[SC]ES,REUSE license files (preferred over single LICENSE file),
+LICENSES/,true,true,false,false,0.2,LICENSES,REUSE license files (preferred over single LICENSE file),
 LICENSES/AGPL-3.0-or-later.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://www.gnu.org/licenses/agpl-3.0.txt
 LICENSES/CC0-1.0.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt
 LICENSES/Unlicense.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://unlicense.org/
