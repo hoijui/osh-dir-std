@@ -3,7 +3,7 @@ LICENSES/,true,true,false,false,0.2,LICENSES,REUSE license files (preferred over
 LICENSES/AGPL-3.0-or-later.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://www.gnu.org/licenses/agpl-3.0.txt
 LICENSES/CC0-1.0.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt
 LICENSES/Unlicense.txt,false,true,false,-,0,LICEN[SC]ES/[^/]+.txt,,https://unlicense.org/
-LICENSE.txt,true,true,false,-,0,LICEN[SC]E(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)",https://www.gnu.org/licenses/agpl-3.0.txt
+LICENSE.txt,true,true,false,-,0,(LICEN[SC]E|COPYING)(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)",https://www.gnu.org/licenses/agpl-3.0.txt
 README.md,true,true,false,-,0,README(\.(txt|md|rst))?,,https://gitlab.com/OSEGermany/ohloom/-/raw/master/README.md
 okh.toml,true,true,false,-,0,okh\.(toml|ya?ml|json|ttl|rdf),manually maintained Open Know-How OSH project manifest (= meta-data file) ValueFlows recipees,https://gitlab.com/OSEGermany/ohloom/-/raw/master/okh.toml
 bom.csv,true,true,false,-,0,([bB][oO][mM]|[bB]ill_?[oO]f_?[mM]aterials)\.(csv|tsv),"manually maintained Bill of Materials. Usually, ""build/bom.csv"" is preferred; though even better is the use of ValueFlows recipees ",https://gitlab.com/OSEGermany/ohloom/-/raw/master/sBoM.csv
