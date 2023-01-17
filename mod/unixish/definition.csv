@@ -76,6 +76,7 @@ gen/recycle.vf_recipe.ttl,true,true,false,-,0.3,(build|target|out(put)?|gen(erat
 gen/okh.toml,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?|untracked)/okh\.(toml|ya?ml|json|ttl|rdf),"alternative location, if generated",
 gen/bom.csv,true,false,false,-,0.2,(build|target|out(put)?|gen(erated)?|untracked)/([bB][oO][mM]|[bB]ill_?[oO]f_?[mM]aterials)\.(csv|tsv),"alternative location, if generated",
 gen/site/,true,false,false,true,0.2,(build|target|out(put)?|gen(erated)?|untracked)/(site|public),"Generated website of the project (for example, for hosting on github or gitlab pages)",
+gen/doc/,true,false,false,false,0.4,(build|target|out(put)?|gen(erated)?|untracked)/doc,,
 gen/doc/assembly/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?|untracked)/doc/assembly,,
 gen/doc/manuf/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?|untracked)/doc/manuf(act(uring)?)?,,
 gen/doc/usr/,true,false,false,true,0.5,(build|target|out(put)?|gen(erated)?|untracked)/doc/usr,,
