@@ -81,7 +81,6 @@ gen/doc/assembly/,true,false,false,true,0.5,ass|asmbly|assembly,(build|target|ou
 gen/doc/manuf/,true,false,false,true,0.5,man|manu|manuf|manufac|manufact|manufacturing,(build|target|out(put)?|gen(erated)?|untracked)/doc/manuf(act(uring)?)?,,
 gen/doc/usr/,true,false,false,true,0.5,usr|user,(build|target|out(put)?|gen(erated)?|untracked)/doc/usr,,
 gen/doc/recycling/,true,false,false,true,0.5,rec|recycle|recycling,(build|target|out(put)?|gen(erated)?|untracked)/doc/recycling,,
-gen/export/,true,false,false,true,0.2,,(build|target|out(put)?|gen(erated)?|untracked)/export,"TODO What is this meant to be? -> Ask pieter and if no idea, delete!",
 doc/,true,true,false,false,0.3,doc|docs|docu|documentation,doc,"Documentation sources - How to use, build, repair, ... the piece of hardware described by the project. Below here, there should only be Markdown files (*maybe* also ValueFlows recipes).",
 doc/assembly/,true,true,false,true,0.5,ass|asmbly|assembly,doc/assembly,"Assembly instructions manual sources - Assembly means: You have all the parts available (bought, printed, milled, ...), and now want to put them together. So this is like a LEGO or IKEA manual. See also: doc/manuf/.",
 doc/assembly/vf_recipe.ttl,true,true,false,-,0.3,,doc/assembly/vf_recipe\.ttl,alternative location 2 - ValueFlows assembling recipe,
