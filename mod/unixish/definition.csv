@@ -54,7 +54,7 @@ src/elec/main-subs/sub-b.sch,false,true,false,-,0,,.+\.sch,,https://github.com/K
 src/elec/main-subs/sub-b.kicad_pcb,false,true,false,-,0,,.+\.kicad_pcb,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.kicad_pcb
 src/elec/main-subs/parts.lib,false,true,false,-,0,,.+\.lib,KiCad parts library,
 src/firmware/,true,true,false,true,0.4,firm|firmware,,Firmware sources,
-src/firmware/Makefile,false,true,false,-,0,,Makefile|CMakeLists.txt,,
+src/firmware/Makefile,false,true,false,-,0,,(.+/)?Makefile|CMakeLists.txt,,
 src/firmware/main.c,false,true,false,-,0,,.+\.c,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/ipip.c
 src/firmware/other.h,false,true,false,-,0,,.+\.h,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/ipip.h
 src/firmware/other.c,false,true,false,-,0,,.+\.c,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/test.c
@@ -64,7 +64,7 @@ src/mech/case-alternative.fcstd,false,true,false,-,0,,.+\.FCStd,FreeCAD project,
 src/mech/parts.lib,false,true,false,-,0,,.+\.lib,FreeCAD parts library,
 src/mech/pieceX.scad,false,true,false,-,0,,.+\.scad,OpenSCAD source file - Open Source CAD defined in code,https://gitlab.com/OSEGermany/ohloom/-/raw/master/3DParts/PoleBase/PoleBase.scad
 src/software/,true,true,false,true,0.4,sw|sftw|software,,Firmware sources,
-src/software/control_lib/Cargo.toml,false,true,false,-,0,,Cargo\.toml|pom\.xml,A sample Rust Software - Project file,https://github.com/hoijui/mle/raw/develop/Cargo.toml
+src/software/control_lib/Cargo.toml,false,true,false,-,0,,(.+/)?Cargo\.toml|pom\.xml,A sample Rust Software - Project file,https://github.com/hoijui/mle/raw/develop/Cargo.toml
 src/software/control_lib/src/main.rs,false,true,false,-,0,,.+\.(rs|cpp|java|py),A sample Rust Software - Source file,https://github.com/hoijui/mle/raw/develop/src/main.rs
 src/test/,true,true,false,true,0.3,tst|test|tests,,Sources for unit- and integration tests for anything contained in this project (excluding the inner details of sub-modules),
 gen/,true,true,false,false,0.1,bld|build|target|out|output|gen|generated|untracked|exp|export|exports|exported,,Where everything generated should en up; this is not tracked in git/SCM,
