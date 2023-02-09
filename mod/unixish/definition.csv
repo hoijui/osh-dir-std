@@ -17,6 +17,7 @@ run/ci,true,true,false,-,0.5,ci,,"Run by CI/Buildbot on each commit, but has to 
 res/,true,true,false,false,0.7,res|resource|resources,,"Stands for ""resources"", and should hold any files that are part of the sources of the project, but are not source code, design, scripts or documentation text files. This includes also binary files, next to text files. The sub-dirs within res/assets/ and res/ should be the same (excluding of course res/assets/assets/).",
 res/conf/,true,true,false,true,0.3,conf|config|configuration,,"Configuration & settings files, e.g. 3D printer settings, log settings, ...",
 res/conf/some-config.xml,false,true,false,-,0,,.+\.xml,,https://raw.githubusercontent.com/xiaoxpai/mbp_first_code/master/mbp-struts2-spring-init/src/main/resources/log4j2.xml
+res/conf/VisiCut-config.plf,false,true,false,-,0,,.+\.plf,,https://gitlab.fabcity.hamburg/hardware/interfacer-osh-build-workshops/libre-solar-box-360wh/-/raw/6a2a2e5d59f91672ed01129b7f8b91eee2715ba9/res/conf/inner-plate-9mm_laser_visicut_config.plf?inline=false
 res/media/,true,true,false,false,0.6,med|media,,"Non-binary (and usually rather small) media goes here. Media are (mainly) images, audio recordings and videos.",
 res/media/img/,true,true,false,true,0.3,img|image|images,,Non-binary (and usually rather small) images go here.,
 res/media/img/diagram-1.svg,false,true,false,-,0,,.+\.svg,,https://www.svgrepo.com/show/185/diagram.svg
