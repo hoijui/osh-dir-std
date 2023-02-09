@@ -60,7 +60,7 @@ src/firmware/other.h,false,true,false,-,0,,.+\.h,,https://github.com/17mon/c/raw
 src/firmware/other.c,false,true,false,-,0,,.+\.c,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/test.c
 src/mech/,true,true,false,true,0.8,mec|mech|mechanic|mechanics|mechanical,,"Mechanical ""blueprints"" - Computer Aided Design (CAD) files",
 src/mech/case.fcstd,false,true,false,-,0,,.+\.fcstd,FreeCAD project,https://github.com/case06/ZACplus/blob/master/cadfiles/kammer/kammer_00.fcstd?raw=true
-src/mech/case-alternative.fcstd,false,true,false,-,0,,.+\.fcstd,FreeCAD project,https://github.com/case06/ZACplus/blob/master/cadfiles/kammer/kammer_01.fcstd?raw=true
+src/mech/case-alternative.fcstd,false,true,false,-,0,,.+\.FCStd,FreeCAD project,https://github.com/case06/ZACplus/blob/master/cadfiles/kammer/kammer_01.fcstd?raw=true
 src/mech/parts.lib,false,true,false,-,0,,.+\.lib,FreeCAD parts library,
 src/mech/pieceX.scad,false,true,false,-,0,,.+\.scad,OpenSCAD source file - Open Source CAD defined in code,https://gitlab.com/OSEGermany/ohloom/-/raw/master/3DParts/PoleBase/PoleBase.scad
 src/software/,true,true,false,true,0.4,sw|sftw|software,,Firmware sources,
