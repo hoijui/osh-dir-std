@@ -57,7 +57,7 @@ src/elec/main-subs/sub-b.pro,false,true,false,-,0,,.+\.pro,,https://github.com/K
 src/elec/main-subs/sub-b.sch,false,true,false,-,0,,.+\.sch,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.sch
 src/elec/main-subs/sub-b.kicad_pcb,false,true,false,-,0,,.+\.kicad_pcb,,https://github.com/KarlK90/yaemk-split-kb/raw/main/PCB/YAEMK.kicad_pcb
 src/elec/main-subs/parts.lib,false,true,false,-,0,,.+\.lib,KiCad parts library,
-src/firmware/,true,true,false,true,0.4,firm|firmware,,Firmware sources,
+src/firmware/,true,true,false,true,0.4,fw|firm|firmware,,Firmware sources,
 src/firmware/Makefile,false,true,false,-,0,,(.+/)?Makefile|CMakeLists.txt,,
 src/firmware/main.c,false,true,false,-,0,,.+\.c,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/ipip.c
 src/firmware/other.h,false,true,false,-,0,,.+\.h,,https://github.com/17mon/c/raw/f5527adc90e8144f0adf9b19bca00b39489fa345/datx/ipip.h
