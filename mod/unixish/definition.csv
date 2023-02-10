@@ -25,9 +25,10 @@ res/media/img/diagram-1.svg,false,true,false,-,0,,.+\.svg,,https://www.svgrepo.c
 res/assets/,true,true,false,false,0.7,asset|assets,,"All binary (and potentially large text-)resources should go here, as this allows to go ""clean-slate"" with this data from time to time, to reduce clone size, if done as a git sub-module (which can also be done later). Having it as a git sub-module, also allows to not fetch it at all, if storage or bandwidth is an issue, and it is not required for the task at hand. The sub-dirs within res/assets/ and res/ should be the same (excluding of course res/assets/assets/).",
 res/assets/media/,true,true,false,false,0.6,med|media,,,
 res/assets/media/img/,true,true,false,true,0.3,img|image|images,,,
-res/assets/media/img/drawing-1.png,false,true,false,-,0,,.+\.png,,https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png
+res/assets/media/img/drawing-1.png,false,true,false,-,0,,.+\.a?png,,https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png
 res/assets/media/img/animation-1.gif,false,true,false,-,0,,.+\.gif,,https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif
-res/assets/media/img/screenshot-1.jpg,false,true,false,-,0,,.+\.jpe?g,,https://www.adslzone.net/app/uploads-adslzone.net/2021/11/todo-sobre-jpg-930x487.jpg
+res/assets/media/img/photo-1.jpg,false,true,false,-,0,,.+\.jpe?g,,https://www.adslzone.net/app/uploads-adslzone.net/2021/11/todo-sobre-jpg-930x487.jpg
+res/assets/media/img/photo-2.webp,false,true,false,-,0,,.+\.(webp|avif),,
 res/assets/media/vid/,true,true,false,true,0.3,vid|video|videos,,,
 res/assets/media/vid/tutorial.webm,false,true,false,-,0,,.+\.(webm|mp4),,https://file-examples.com/wp-content/uploads/2020/03/file_example_WEBM_480_900KB.webm
 res/assets/var/,true,true,false,true,0.5,var|various|misc|miscellaneous,,"Stands for ""various"", aka ""misc.""/""miscellaneous""; and should hold files that do not fit into any of the other resource categories.",
