@@ -29,6 +29,7 @@ res/assets/media/img/drawing-1.png,false,true,false,-,0,,.+\.a?png,,https://uplo
 res/assets/media/img/animation-1.gif,false,true,false,-,0,,.+\.gif,,https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif
 res/assets/media/img/photo-1.jpg,false,true,false,-,0,,.+\.jpe?g,,https://www.adslzone.net/app/uploads-adslzone.net/2021/11/todo-sobre-jpg-930x487.jpg
 res/assets/media/img/photo-2.webp,false,true,false,-,0,,.+\.(webp|avif),,
+res/assets/media/img/partialy-auto-generated-drawing.pdf,false,true,false,-,0,,.+\.pdf,,
 res/assets/media/vid/,true,true,false,true,0.3,vid|video|videos,,,
 res/assets/media/vid/tutorial.webm,false,true,false,-,0,,.+\.(webm|mp4),,https://file-examples.com/wp-content/uploads/2020/03/file_example_WEBM_480_900KB.webm
 res/assets/var/,true,true,false,true,0.5,var|various|misc|miscellaneous,,"Stands for ""various"", aka ""misc.""/""miscellaneous""; and should hold files that do not fit into any of the other resource categories.",
