@@ -1,6 +1,6 @@
 Name,Type,Description
 Path,path-string,"Sample path, relative to the repo root. Directories end with '/'"
-Fixed,boolean,"Whether this is actually part of the standard, as is ('true'), or rahter just a sample content, to clarify the use of the ancestor directories ('false')"
+Normative,boolean,"Whether this is actually part of the standard, as is ('true'), or rahter just a sample content, to clarify the use of the ancestor directories ('false')"
 Source,boolean,"Whether this is part of the repo sources, e.g. git tracked ('true'), or rather generated ('false')."
 Module,boolean,"Whether this is a directory containing a module (== a part that might be used elsewhere/is its own proper project) ('true'), or not ('false')"
 ArbitraryContent,boolean,"Whether this directory may contain arbitrary other directories ('true'), or has a certain, predefined set of directory names that may be used ('false'), or is not a directory ('-')"
