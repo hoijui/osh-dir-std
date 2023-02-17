@@ -1,4 +1,4 @@
-Path,Normative,Source,Module,ArbitraryContent,Indicativeness,Variations,Regex,Description,Sample Content
+Path,Normative,Tracked,Module,ArbitraryContent,Indicativeness,Variations,Regex,Description,Sample Content
 LICENSES/,true,true,false,false,0.2,LICENSES,,REUSE license files (preferred over single LICENSE file),
 LICENSES/AGPL-3.0-or-later.txt,false,true,false,-,0,,[^/]+\.txt,,https://www.gnu.org/licenses/agpl-3.0.txt
 LICENSE.txt,true,true,false,-,0,,(?i)(LICEN[SC]E|COPYING)(\.[^/]+)?(\.(txt|md|rst))?,"Single, project-wide, generic license file (long term: deprecated)",https://www.gnu.org/licenses/agpl-3.0.txt

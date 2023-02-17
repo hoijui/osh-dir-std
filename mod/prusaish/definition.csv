@@ -1,4 +1,4 @@
-Path,Normative,Source,Module,ArbitraryContent,Indicativeness,Variations,Regex,Description,Sample Content
+Path,Normative,Tracked,Module,ArbitraryContent,Indicativeness,Variations,Regex,Description,Sample Content
 bom/,true,true,false,true,0.5,bom,,The BoM of the OSH,
 bom/bom.csv,true,true,false,-,0.5,,bom\.csv,"Structural, machine-readable, source",https://gitlab.com/OSEGermany/ohloom/-/raw/master/sBoM.csv
 assembly.vf_recipe.ttl,true,true,false,-,0.3,,assembly\.vf_recipe\.ttl,ValueFlows assembling recipe,
