@@ -56,3 +56,13 @@ Why do we need directory standards?
 The most relevant content of this repo
 is licensed under the `GFDL-1.3-or-later`.
 use the REUSE tool (`reuse spdx`) for more details.
+
+## Funding
+
+This project was funded by the European Regional Development Fund (ERDF)
+in the context of the [INTERFACER Project](https://www.interfacerproject.eu/),
+from January 2022 (project start)
+until March 2023.
+
+![Logo of the EU ERDF program](
+    https://cloud.fabcity.hamburg/s/TopenKEHkWJ8j5P/download/logo-eu-erdf.png)
