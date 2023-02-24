@@ -100,7 +100,7 @@ doc/manuf/,true,true,false,false,true,0.5,man|manu|manuf|manufac|manufact|manufa
 doc/manuf/main.md,false,true,false,false,-,0,,.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
 doc/manuf/chap-1/sec-1.md,false,true,false,false,-,0,,.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
 doc/manuf/chap-1/sec-2.md,false,true,false,false,-,0,,.+\.md,,![image X](../../../res/assets/media/img/animation-1.gif)
-doc/usr/,true,true,false,false,true,0.5,usr|user,,"User manual (aka operation, repair & maintenance instructions -> split up?) sources",
+doc/usr/,true,true,false,false,true,0.5,usr|user|usage,,"User manual (aka operation, repair & maintenance instructions -> split up?) sources",
 doc/usr/main.md,false,true,false,false,-,0,,.+\.md,,[C1 S1](chap-1/sec-1.md) [C1 S2](chap-1/sec-2.md)
 doc/usr/chap-1/sec-1.md,false,true,false,false,-,0,,.+\.md,,![image X](../../../res/assets/media/img/drawing-1.png)
 doc/usr/chap-1/sec-2.md,false,true,false,false,-,0,,.+\.md,,![image Y](../../../res/media/img/diagram-1.svg)
