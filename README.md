@@ -9,9 +9,6 @@ SPDX-License-Identifier: CC0-1.0
 [![REUSE status](
     https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)](
     https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
-[![In cooperation with FabCity Hamburg](
-    https://custom-icon-badges.demolab.com/badge/-FCHH-dddddd.svg?logo=fc_logo)](
-    https://fabcity.hamburg)
 
 [![In cooperation with FabCity Hamburg](
     https://custom-icon-badges.demolab.com/badge/-FCHH-dddddd.svg?logo=fc_logo)](
