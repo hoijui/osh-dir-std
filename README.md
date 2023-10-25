@@ -6,6 +6,9 @@ SPDX-License-Identifier: CC0-1.0
 
 # OSH project directory structure standards
 
+[![License: GFDL-1.3-or-later](
+    https://img.shields.io/badge/License-GFDL--1.3--or--later-blue.svg)](
+    https://spdx.org/licenses/GFDL-1.3-or-later.html)
 [![REUSE status](
     https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)](
     https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
