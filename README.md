@@ -11,10 +11,10 @@ SPDX-License-Identifier: CC0-1.0
     https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
 
 [![In cooperation with FabCity Hamburg](
-    https://custom-icon-badges.demolab.com/badge/-FCHH-dddddd.svg?logo=fc_logo)](
+    https://raw.githubusercontent.com/osegermany/tiny-files/master/res/media/img/badge-fchh.svg)](
     https://fabcity.hamburg)
 [![In cooperation with Open Source Ecology Germany](
-    https://custom-icon-badges.demolab.com/badge/-OSEG-555555.svg?logo=oseg_logo)](
+    https://raw.githubusercontent.com/osegermany/tiny-files/master/res/media/img/badge-oseg.svg)](
     https://opensourceecology.de)
 
 ## Motivation
