@@ -52,7 +52,7 @@ Why do we need directory standards?
 
 The most relevant content of this repo
 is licensed under the `GFDL-1.3-or-later`.
-use the REUSE tool (`reuse spdx`) for more details.
+Use the REUSE tool (`reuse spdx`) for more details.
 
 ## Funding
 
