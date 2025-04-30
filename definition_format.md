@@ -13,4 +13,3 @@ for the respective OSH dir-structure definition.
 
 See [`definition_format.csv`](definition_format.csv)
 for descriptions of all the columns.
-
