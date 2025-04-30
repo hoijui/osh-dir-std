@@ -10,8 +10,8 @@ SPDX-License-Identifier: CC0-1.0
     https://img.shields.io/badge/License-GFDL--1.3--or--later-blue.svg)](
     https://spdx.org/licenses/GFDL-1.3-or-later.html)
 [![REUSE status](
-    https://api.reuse.software/badge/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)](
-    https://api.reuse.software/info/gitlab.fabcity.hamburg/software/template-osh-repo-structure-minimal)
+    https://api.reuse.software/badge/gitlab.com/osegermany/osh-dir-std)](
+    https://api.reuse.software/info/gitlab.com/osegermany/osh-dir-std)
 
 [![In cooperation with FabCity Hamburg](
     https://raw.githubusercontent.com/osegermany/tiny-files/master/res/media/img/badge-fchh.svg)](

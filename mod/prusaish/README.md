@@ -26,11 +26,11 @@ can be found in various formats here:
   \- source, machine-readable, contains all the data
   \- **use this for editing**
 - [file-listing](
-  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/unixish/listing.txt)
+  https://osegermany.gitlab.io/osh-dir-std/mod/prusaish/listing.txt)
   \- like the output of `find` in a sample repo
   \- generated
 - [tree](
-  https://software.development.fabcity.hamburg/template-osh-repo-structure-minimal/mod/unixish/tree.html)
+  https://osegermany.gitlab.io/osh-dir-std/mod/prusaish/tree.html)
   \- like the output of `tree` in a sample repo
   \- generated, **recommended** for inspection
 
