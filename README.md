@@ -45,6 +45,11 @@ Why do we need directory standards?
   and git sub-modules for firmware and scripts.
   Most directories are named after the file-type
   (i.e. suffix or software) they contain.
+  
+  - [Prunixish](mod/prunixish/README.md):
+Designed for modular Open Source projects with Hardware, Software, Design and Documentation components. 
+
+The standard is based on Unixish und Prusaish.
 
 ## Other structure templates
 

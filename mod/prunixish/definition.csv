@@ -1,0 +1,29 @@
+Path,Normative,Tracked,Generated,Module,ArbitraryContent,Tags,Indicativeness,Variations,Regex,Description,Sample Content
+docs/,,,,,,documentation,,doc|docs|docu|documentation,,documentation & supplementary material,
+docs/guides/,true,true,false,false,,documentation,,guide/guides,,documentation content,
+docs/media/,true,true,false,false,,documentation,,med|media,,"documentation related media files, technical drawings",
+docs/appendix/,true,true,false,false,,documentation,,,,"supplementary material, e.g. calculations",
+mechanics/,true,true,false,false,,hardware,,,,Mechanics CAD source files organised by dimensionality,
+mechanics/2d,true,true,false,false,,hardware,,,,"2D CAD files, organised by type",
+mechanics/2d/layout,true,true,false,false,,hardware,,,,subassembly files,".dxf, .svg"
+mechanics/2d/lib,true,true,false,false,,hardware,,lib|libs|library|libraries,,external library files,
+mechanics/3d/,true,true,false,false,,hardware,,,,"3D CAD files, organised by type",
+mechanics/3d/project,true,true,false,false,,hardware,,pro | project | projects,,contains the subassembly project files,.pro
+mechanics/3d/layout,true,true,false,false,,hardware,,,,subassembly files,.fcstd
+mechanics/3d/export,true,true,false,false,,hardware,,,,subassembly export files,".step, .stl"
+mechanics/3d/lib,true,true,false,false,,hardware,,lib|libs|library|libraries,,external library files,
+electronics/,true,true,false,false,,hardware,,electronic | electronics,,"Electronic CAD source files, organised by type",
+electronics/project,true,true,false,false,,hardware,,pro | project | projects,,contains the project files,.pro
+electronics/layout,true,true,false,false,,hardware,,,,contains the pcb layout files,.pcb
+electronics/schematics,true,true,false,false,,hardware,,sch | schematic | schematics,,contains the schematic files,.sch
+electronics/kicad,true,true,false,false,,hardware,,,,"contains project, layout and schematic files for kicad (need to be in one place)",.kicad_x
+electronics/export,true,true,false,false,,hardware,,,,export files for pcb,.grb
+electronics/lib/,true,true,false,false,,hardware,,lib|libs|library|libraries,,external library files,
+src/,true,true,false,false,,software,,src|source|sources|scripts,,"software source code, like scripts, etc.",
+conf/,true,true,false,false,,software,,conf|config|configuration,,configuration files,
+assets/,true,true,false,false,,software,,bin|exec|run|asset|assets,,binary files,
+submodules/,true,true,false,false,,generic,,submodule | submodules,,submodules,
+media/,true,true,false,false,,generic,,med|media,,embedded media files,
+BOM.csv,false,true,false,false,,hardware,,,,Central bill of materials (BOM),
+LICENSE.md,false,true,false,false,,generic,,,,Central license file,
+README.md,false,true,false,false,,generic,,,,central readme file,
