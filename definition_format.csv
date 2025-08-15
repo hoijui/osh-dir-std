@@ -8,6 +8,6 @@ ArbitraryContent,Option(boolean),true|false|-,"Whether this directory may contai
 Tags,options-string,.*,"A '|' separated list of tags that apply to the record. Currently commonly used are ""bom"" (indicating Bill-of-Material files) and ""license"" (indicating license files)."
 Indicativeness,"float [0.0, 1.0]",0.[0-9]+|1.0,"How likely this entry indicates that a project containing it, is actually using this very dir standard, with a value from min 0.0 to max 1.0. This is when tring to (automatically) figure out, which standard a project is using, by looking at its directory structure (including files)."
 Variations,options-string,.*,A '|' separated list of names for the last path part if it is a directory; empty for files
-Regex,regex-string,.*,"A Regex expression, always matching the whole repo-relative path, to indicate this entry"
+Regex,regex-string,.*,"A Regex expression, always matching the whole repo-relative path, to indicate this entry. This has to be prvided for all files (not directories). So in each row, either Variations or this is set; never both, never none of the two."
 Description,string,.*,Description of this entry; human-readable
 Sample Content,string|URL,.*,"Either an HTTP(S) URL to download a sample content, or the sample content itsself. Which of the two it is, can be figured out by checking if the first four chars equal to 'http'"
