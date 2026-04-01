@@ -46,6 +46,19 @@ Why do we need directory standards?
   Most directories are named after the file-type
   (i.e. suffix or software) they contain.
 
+- [Designish](mod/designish/README.md) (**lifecycle-driven**):
+  Built around the **product lifecycle** and the **design process**.
+  Directories are named after the *phase* a file belongs to,
+  not the file type it contains — making a project's maturity and
+  progress immediately visible to contributors of all backgrounds,
+  including designers with no prior Git experience.
+  Top-level numbered areas (`10_management/`, `20_legal/`,
+  `30_engineering/`, `40_stewardship/`, `50_usage/`) provide a
+  clear visual progress map, while a 5-phase creative pipeline
+  inside `30_engineering/` guides teams from concept to release.
+  A dedicated `40_stewardship/` section covers maintenance, repair,
+  and recovery — supporting circular economy principles.
+
 ## Other structure templates
 
 - <https://www.sciencedirect.com/journal/hardwarex>
